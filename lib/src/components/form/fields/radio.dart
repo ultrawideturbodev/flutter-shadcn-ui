@@ -42,8 +42,8 @@ class ShadRadioGroupFormField<T> extends ShadFormBuilderField<T> {
     WrapCrossAlignment? crossAxisAlignment,
   }) : super(
           decorationBuilder: (context) =>
-              ShadTheme.of(context).radioTheme.decoration ??
-              const ShadDecoration(),
+              TurboTheme.of(context).radioTheme.decoration ??
+              const TurboDecoration(),
           builder: (field) {
             final state = field as _ShadFormBuilderRadioGroupState;
             return ShadRadioGroup(

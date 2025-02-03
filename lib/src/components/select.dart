@@ -353,7 +353,7 @@ class ShadSelect<T> extends StatefulWidget {
   final double? maxHeight;
 
   /// The decoration of the [ShadSelect].
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// The trailing widget of the [ShadSelect], defaults to a chevron-right
   /// icon.
@@ -499,7 +499,7 @@ class ShadSelectState<T> extends State<ShadSelect<T>> {
       controller.addListener(() {
         if (controller.isOpen) return;
         final effectiveClearSearchOnClose = widget.clearSearchOnClose ??
-            ShadTheme.of(context, listen: false)
+            TurboTheme.of(context, listen: false)
                 .selectTheme
                 .clearSearchOnClose ??
             true;
@@ -599,8 +599,8 @@ class ShadSelectState<T> extends State<ShadSelect<T>> {
 
   @override
   Widget build(BuildContext context) {
-    assert(debugCheckHasShadTheme(context));
-    final theme = ShadTheme.of(context);
+    assert(debugCheckHasTurboTheme(context));
+    final theme = TurboTheme.of(context);
 
     final effectiveDecoration = theme.decoration
         .mergeWith(theme.selectTheme.decoration)
@@ -693,7 +693,7 @@ class ShadSelectState<T> extends State<ShadSelect<T>> {
                       theme.selectTheme.searchPadding ??
                       const EdgeInsets.all(12),
                   placeholder: widget.searchPlaceholder,
-                  decoration: ShadDecoration.none,
+                  decoration: TurboDecoration.none,
                   onChanged: widget.onSearchChanged,
                 ),
             widget.searchDivider ?? const Divider(height: 1),
@@ -745,17 +745,17 @@ class ShadSelectState<T> extends State<ShadSelect<T>> {
 
             final Widget select = ShadDisabled(
               disabled: !widget.enabled,
-              child: ShadFocusable(
+              child: TurboFocusable(
                 canRequestFocus: widget.enabled,
                 focusNode: focusNode,
                 builder: (context, focused, child) {
-                  return ShadDecorator(
+                  return TurboDecorator(
                     focused: focused,
                     decoration: effectiveDecoration,
                     child: child,
                   );
                 },
-                child: ShadGestureDetector(
+                child: TurboGestureDetector(
                   cursor: SystemMouseCursors.click,
                   behavior: HitTestBehavior.opaque,
                   onTap: () {
@@ -1001,7 +1001,7 @@ class _ShadOptionState<T> extends State<ShadOption<T>> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final inheritedSelect =
         context.watch<ShadSelectState<dynamic>>() as ShadSelectState<T>;
     final selected = inheritedSelect.selectedValues.contains(widget.value);
@@ -1050,7 +1050,7 @@ class _ShadOptionState<T> extends State<ShadOption<T>> {
       },
       child: Focus(
         focusNode: focusNode,
-        child: ShadGestureDetector(
+        child: TurboGestureDetector(
           behavior: HitTestBehavior.opaque,
           cursor: SystemMouseCursors.click,
           onHoverChange: (value) {

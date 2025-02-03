@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:shadcn_ui/src/theme/theme.dart';
 
 @immutable
-class ShadHoverStrategies {
-  const ShadHoverStrategies({
+class TurboHoverStrategies {
+  const TurboHoverStrategies({
     this.hover = const {},
     this.unhover = const {},
   });
@@ -17,7 +17,7 @@ class ShadHoverStrategies {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is ShadHoverStrategies &&
+    return other is TurboHoverStrategies &&
         setEquals(other.hover, hover) &&
         setEquals(other.unhover, unhover);
   }
@@ -25,11 +25,11 @@ class ShadHoverStrategies {
   @override
   int get hashCode => hover.hashCode ^ unhover.hashCode;
 
-  ShadHoverStrategies copyWith({
+  TurboHoverStrategies copyWith({
     Set<ShadHoverStrategy>? hover,
     Set<ShadHoverStrategy>? unhover,
   }) {
-    return ShadHoverStrategies(
+    return TurboHoverStrategies(
       hover: hover ?? this.hover,
       unhover: unhover ?? this.unhover,
     );
@@ -57,8 +57,8 @@ enum ShadHoverStrategy {
 ///
 /// If the device supports mouse, the [hoverStrategies] will be ignored and
 /// [MouseRegion] will be used instead.
-class ShadGestureDetector extends StatelessWidget {
-  const ShadGestureDetector({
+class TurboGestureDetector extends StatelessWidget {
+  const TurboGestureDetector({
     super.key,
     required this.child,
     this.cursor = MouseCursor.defer,
@@ -94,7 +94,7 @@ class ShadGestureDetector extends StatelessWidget {
     this.excludeFromSemantics = false,
   });
 
-  final ShadHoverStrategies? hoverStrategies;
+  final TurboHoverStrategies? hoverStrategies;
   final ValueChanged<bool>? onHoverChange;
   final MouseCursor cursor;
   final Widget child;
@@ -169,7 +169,7 @@ class ShadGestureDetector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final supportsMouse = switch (Theme.of(context).platform) {
       TargetPlatform.android ||
       TargetPlatform.iOS ||

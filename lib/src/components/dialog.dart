@@ -21,7 +21,7 @@ Future<T?> showShadDialog<T>({
   List<Effect<dynamic>>? animateOut,
   ShadDialogVariant variant = ShadDialogVariant.primary,
 }) {
-  final theme = ShadTheme.of(context);
+  final theme = TurboTheme.of(context);
   final effectiveDialogTheme = switch (variant) {
     ShadDialogVariant.primary => theme.primaryDialogTheme,
     ShadDialogVariant.alert => theme.alertDialogTheme,
@@ -209,7 +209,7 @@ class ShadDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final effectiveDialogTheme = switch (variant) {
       ShadDialogVariant.primary => theme.primaryDialogTheme,
       ShadDialogVariant.alert => theme.alertDialogTheme,
@@ -222,7 +222,7 @@ class ShadDialog extends StatelessWidget {
     final effectiveCloseIcon = closeIcon ??
         (closeIconData == null && effectiveDialogTheme.closeIconData == null
             ? null
-            : ShadButton.ghost(
+            : TurboButton.ghost(
                 icon: Icon(
                   size: 16,
                   closeIconData ??
@@ -334,7 +334,7 @@ class ShadDialog extends StatelessWidget {
           );
 
           if (!sm && effectiveExpandActionsWhenTiny) {
-            effectiveActions = ShadTheme(
+            effectiveActions = TurboTheme(
               data: theme.copyWith(
                 primaryButtonTheme:
                     theme.primaryButtonTheme.copyWith(width: double.infinity),

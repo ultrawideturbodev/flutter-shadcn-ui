@@ -30,7 +30,7 @@ class ShadPopoverTheme {
   final EdgeInsetsGeometry? padding;
 
   /// {@macro popover.decoration}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@macro popover.anchor}
   final ShadAnchorBase? anchor;
@@ -49,7 +49,7 @@ class ShadPopoverTheme {
       effects: t < 0.5 ? a.effects : b.effects,
       shadows: t < 0.5 ? a.shadows : b.shadows,
       padding: EdgeInsetsGeometry.lerp(a.padding, b.padding, t),
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       anchor: t < 0.5 ? a.anchor : b.anchor,
       filter: t < 0.5 ? a.filter : b.filter,
     );
@@ -62,7 +62,7 @@ class ShadPopoverTheme {
     List<Effect<dynamic>>? effects,
     List<BoxShadow>? shadows,
     EdgeInsetsGeometry? padding,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     ShadAnchorBase? anchor,
     ImageFilter? filter,
   }) {

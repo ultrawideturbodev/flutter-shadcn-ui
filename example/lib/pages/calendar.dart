@@ -24,7 +24,7 @@ class _CalendarPageState extends State<CalendarPage> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return BaseScaffold(
       appBarTitle: 'Calendar',
       editable: [

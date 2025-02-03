@@ -80,7 +80,7 @@ class _PresetsDatePickerState extends State<PresetsDatePicker> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return ConstrainedBox(
       constraints: const BoxConstraints(maxWidth: 600),
       child: ShadDatePicker(

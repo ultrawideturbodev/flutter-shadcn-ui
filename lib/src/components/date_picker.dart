@@ -507,7 +507,7 @@ class ShadDatePicker extends StatefulWidget {
   /// The decoration of the calendar.
   /// Defaults to `ShadDecoration.none`.
   /// {@endtemplate}
-  final ShadDecoration? calendarDecoration;
+  final TurboDecoration? calendarDecoration;
 
   /// {@macro ShadPopover.padding}
   final EdgeInsets? popoverPadding;
@@ -615,7 +615,7 @@ class ShadDatePicker extends StatefulWidget {
   final double? navigationButtonDisabledOpacity;
 
   /// {@macro ShadCalendar.decoration}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@macro ShadCalendar.spacingBetweenMonths}
   final double? spacingBetweenMonths;
@@ -669,7 +669,7 @@ class ShadDatePicker extends StatefulWidget {
   final EdgeInsets? dayButtonPadding;
 
   /// {@macro ShadCalendar.dayButtonDecoration}
-  final ShadDecoration? dayButtonDecoration;
+  final TurboDecoration? dayButtonDecoration;
 
   /// {@macro ShadCalendar.selectedDayButtonTextStyle}
   final TextStyle? selectedDayButtonTextStyle;
@@ -681,16 +681,16 @@ class ShadDatePicker extends StatefulWidget {
   final TextStyle? dayButtonTextStyle;
 
   /// {@macro ShadCalendar.dayButtonVariant}
-  final ShadButtonVariant? dayButtonVariant;
+  final TurboButtonVariant? dayButtonVariant;
 
   /// {@macro ShadCalendar.selectedDayButtonVariant}
-  final ShadButtonVariant? selectedDayButtonVariant;
+  final TurboButtonVariant? selectedDayButtonVariant;
 
   /// {@macro ShadCalendar.insideRangeDayButtonVariant}
-  final ShadButtonVariant? insideRangeDayButtonVariant;
+  final TurboButtonVariant? insideRangeDayButtonVariant;
 
   /// {@macro ShadCalendar.todayButtonVariant}
-  final ShadButtonVariant? todayButtonVariant;
+  final TurboButtonVariant? todayButtonVariant;
 
   /// {@macro ShadCalendar.gridMainAxisSpacing}
   final double? gridMainAxisSpacing;
@@ -702,10 +702,10 @@ class ShadDatePicker extends StatefulWidget {
   final TextStyle? dayButtonOutsideMonthTextStyle;
 
   /// {@macro ShadCalendar.dayButtonOutsideMonthVariant}
-  final ShadButtonVariant? dayButtonOutsideMonthVariant;
+  final TurboButtonVariant? dayButtonOutsideMonthVariant;
 
   /// {@macro ShadCalendar.selectedDayButtonOusideMonthVariant}
-  final ShadButtonVariant? selectedDayButtonOusideMonthVariant;
+  final TurboButtonVariant? selectedDayButtonOusideMonthVariant;
 
   // ---
   // POPOVER
@@ -727,7 +727,7 @@ class ShadDatePicker extends StatefulWidget {
   final List<BoxShadow>? shadows;
 
   /// {@macro ShadPopover.decoration}
-  final ShadDecoration? popoverDecoration;
+  final TurboDecoration? popoverDecoration;
 
   /// {@macro ShadPopover.filter}
   final ImageFilter? filter;
@@ -760,10 +760,10 @@ class ShadDatePicker extends StatefulWidget {
   final Widget? buttonChild;
 
   /// {@macro ShadButton.variant}
-  final ShadButtonVariant? buttonVariant;
+  final TurboButtonVariant? buttonVariant;
 
   /// {@macro ShadButton.size}
-  final ShadButtonSize? size;
+  final TurboButtonSize? size;
 
   /// {@macro ShadButton.cursor}
   final MouseCursor? cursor;
@@ -814,13 +814,13 @@ class ShadDatePicker extends StatefulWidget {
   final TextDecoration? hoverTextDecoration;
 
   /// {@macro ShadButton.decoration}
-  final ShadDecoration? buttonDecoration;
+  final TurboDecoration? buttonDecoration;
 
   /// {@macro ShadButton.enabled}
   final bool enabled;
 
   /// {@macro ShadButton.statesController}
-  final ShadStatesController? statesController;
+  final TurboStatesController? statesController;
 
   /// {@macro ShadButton.gap}
   final double? gap;
@@ -832,7 +832,7 @@ class ShadDatePicker extends StatefulWidget {
   final CrossAxisAlignment? crossAxisAlignment;
 
   /// {@macro ShadButton.hoverStrategies}
-  final ShadHoverStrategies? hoverStrategies;
+  final TurboHoverStrategies? hoverStrategies;
 
   /// {@macro ShadButton.onHoverChange}
   final ValueChanged<bool>? onHoverChange;
@@ -958,7 +958,7 @@ class _ShadDatePickerState extends State<ShadDatePicker> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final isSelected = switch (widget.variant) {
       ShadDatePickerVariant.single => selected != null,
@@ -981,7 +981,7 @@ class _ShadDatePickerState extends State<ShadDatePicker> {
         true;
     final effectiveCalendarDecoration = widget.calendarDecoration ??
         theme.datePickerTheme.calendarDecoration ??
-        ShadDecoration.none;
+        TurboDecoration.none;
 
     final effectiveOrderPolicy = widget.orderPolicy ??
         theme.datePickerTheme.orderPolicy ??
@@ -1159,10 +1159,10 @@ class _ShadDatePickerState extends State<ShadDatePicker> {
           ],
         );
       },
-      child: ShadButton.raw(
+      child: TurboButton.raw(
         variant: widget.buttonVariant ??
             theme.datePickerTheme.buttonVariant ??
-            ShadButtonVariant.outline,
+            TurboButtonVariant.outline,
         width: widget.width ?? theme.datePickerTheme.width ?? 276,
         mainAxisAlignment: widget.mainAxisAlignment ??
             theme.datePickerTheme.mainAxisAlignment ??

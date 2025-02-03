@@ -17,7 +17,7 @@ class ShadAlertTheme {
   });
 
   final bool merge;
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
   final EdgeInsets? iconPadding;
   final Color? iconColor;
   final TextStyle? titleStyle;
@@ -36,7 +36,7 @@ class ShadAlertTheme {
     if (identical(a, b)) return a;
     return ShadAlertTheme(
       merge: b.merge,
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       iconPadding: EdgeInsets.lerp(a.iconPadding, b.iconPadding, t),
       iconColor: Color.lerp(a.iconColor, b.iconColor, t),
       titleStyle: TextStyle.lerp(a.titleStyle, b.titleStyle, t),
@@ -50,7 +50,7 @@ class ShadAlertTheme {
 
   ShadAlertTheme copyWith({
     bool? merge,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     EdgeInsets? iconPadding,
     Color? iconColor,
     TextStyle? titleStyle,

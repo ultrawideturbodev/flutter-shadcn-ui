@@ -63,7 +63,7 @@ class ShadTabsTheme {
   final EdgeInsets? padding;
 
   /// {@macro ShadTabs.decoration}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@macro ShadTabs.tabBarConstraints}
   final BoxConstraints? tabBarConstraints;
@@ -93,10 +93,10 @@ class ShadTabsTheme {
   final EdgeInsets? tabPadding;
 
   /// {@macro ShadTabs.tabDecoration}
-  final ShadDecoration? tabDecoration;
+  final TurboDecoration? tabDecoration;
 
   /// {@macro ShadTabs.tabSelectedDecoration}
-  final ShadDecoration? tabSelectedDecoration;
+  final TurboDecoration? tabSelectedDecoration;
 
   /// {@macro ShadTabs.tabForegroundColor}
   final Color? tabForegroundColor;
@@ -114,7 +114,7 @@ class ShadTabsTheme {
   final List<BoxShadow>? tabSelectedShadows;
 
   /// {@macro ShadTabs.tabSize}
-  final ShadButtonSize? tabSize;
+  final TurboButtonSize? tabSize;
 
   /// {@macro ShadTabs.tabApplyIconColorFilter}
   final bool? tabApplyIconColorFilter;
@@ -147,7 +147,7 @@ class ShadTabsTheme {
   final CrossAxisAlignment? tabCrossAxisAlignment;
 
   /// {@macro ShadButton.tabHoverStrategies}
-  final ShadHoverStrategies? tabHoverStrategies;
+  final TurboHoverStrategies? tabHoverStrategies;
 
   /// {@macro ShadButton.longPressDuration}
   final Duration? longPressDuration;
@@ -164,7 +164,7 @@ class ShadTabsTheme {
       dragStartBehavior: t < 0.5 ? a.dragStartBehavior : b.dragStartBehavior,
       physics: t < 0.5 ? a.physics : b.physics,
       padding: EdgeInsets.lerp(a.padding, b.padding, t),
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       tabBarConstraints:
           BoxConstraints.lerp(a.tabBarConstraints, b.tabBarConstraints, t),
       contentConstraints:
@@ -186,8 +186,8 @@ class ShadTabsTheme {
         t,
       ),
       tabPadding: EdgeInsets.lerp(a.tabPadding, b.tabPadding, t),
-      tabDecoration: ShadDecoration.lerp(a.tabDecoration, b.tabDecoration, t),
-      tabSelectedDecoration: ShadDecoration.lerp(
+      tabDecoration: TurboDecoration.lerp(a.tabDecoration, b.tabDecoration, t),
+      tabSelectedDecoration: TurboDecoration.lerp(
         a.tabSelectedDecoration,
         b.tabSelectedDecoration,
         t,
@@ -367,7 +367,7 @@ class ShadTabsTheme {
     DragStartBehavior? dragStartBehavior,
     ScrollPhysics? physics,
     EdgeInsets? padding,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     BoxConstraints? tabBarConstraints,
     BoxConstraints? contentConstraints,
     bool? expandContent,
@@ -377,14 +377,14 @@ class ShadTabsTheme {
     Color? tabHoverBackgroundColor,
     Color? tabSelectedHoverBackgroundColor,
     EdgeInsets? tabPadding,
-    ShadDecoration? tabDecoration,
-    ShadDecoration? tabSelectedDecoration,
+    TurboDecoration? tabDecoration,
+    TurboDecoration? tabSelectedDecoration,
     Color? tabForegroundColor,
     Color? tabSelectedForegroundColor,
     TextStyle? tabTextStyle,
     List<BoxShadow>? tabShadows,
     List<BoxShadow>? tabSelectedShadows,
-    ShadButtonSize? tabSize,
+    TurboButtonSize? tabSize,
     bool? tabApplyIconColorFilter,
     MouseCursor? tabCursor,
     Color? tabHoverForegroundColor,
@@ -395,7 +395,7 @@ class ShadTabsTheme {
     TextDecoration? tabHoverTextDecoration,
     MainAxisAlignment? tabMainAxisAlignment,
     CrossAxisAlignment? tabCrossAxisAlignment,
-    ShadHoverStrategies? tabHoverStrategies,
+    TurboHoverStrategies? tabHoverStrategies,
     Duration? longPressDuration,
   }) {
     return ShadTabsTheme(

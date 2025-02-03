@@ -39,7 +39,7 @@ class BasicResizable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return ConstrainedBox(
       constraints: const BoxConstraints(maxHeight: 200),
       child: DecoratedBox(
@@ -92,7 +92,7 @@ class VerticalResizable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return ConstrainedBox(
       constraints: const BoxConstraints(maxHeight: 200),
       child: DecoratedBox(
@@ -134,7 +134,7 @@ class HandleResizable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return ConstrainedBox(
       constraints: const BoxConstraints(maxHeight: 200),
       child: DecoratedBox(

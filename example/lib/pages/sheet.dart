@@ -22,7 +22,7 @@ class _SheetPageState extends State<SheetPage> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return BaseScaffold(
       appBarTitle: 'Sheet',
       editable: [
@@ -45,7 +45,7 @@ class _SheetPageState extends State<SheetPage> {
         ),
       ],
       children: [
-        ShadButton.outline(
+        TurboButton.outline(
           child: const Text('Open'),
           onPressed: () {
             showShadSheet(
@@ -61,7 +61,7 @@ class _SheetPageState extends State<SheetPage> {
                   title: const Text('Edit Profile'),
                   description: const Text(
                       "Make changes to your profile here. Click save when you're done"),
-                  actions: const [ShadButton(child: Text('Save changes'))],
+                  actions: const [TurboButton(child: Text('Save changes'))],
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 20),
                     child: Column(

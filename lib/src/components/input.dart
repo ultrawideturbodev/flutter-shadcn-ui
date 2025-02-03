@@ -95,7 +95,7 @@ class ShadInput extends StatefulWidget {
           'Either initialValue or controller must be specified',
         );
 
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
   final String? initialValue;
   final Widget? placeholder;
   final TextMagnifierConfiguration magnifierConfiguration;
@@ -351,7 +351,7 @@ class ShadInputState extends State<ShadInput>
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final effectiveTextStyle = widget.style ??
         theme.inputTheme.style ??
         theme.textTheme.muted.copyWith(
@@ -359,7 +359,7 @@ class ShadInputState extends State<ShadInput>
         );
 
     final effectiveDecoration =
-        (theme.inputTheme.decoration ?? const ShadDecoration())
+        (theme.inputTheme.decoration ?? const TurboDecoration())
             .mergeWith(widget.decoration);
 
     final effectivePadding = widget.padding ??
@@ -433,7 +433,7 @@ class ShadInputState extends State<ShadInput>
             return ValueListenableBuilder(
               valueListenable: effectiveController,
               builder: (context, textEditingValue, child) {
-                return ShadDecorator(
+                return TurboDecorator(
                   decoration: effectiveDecoration,
                   focused: focused,
                   child: Padding(

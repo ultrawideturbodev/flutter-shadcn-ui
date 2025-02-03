@@ -27,7 +27,7 @@ class ShadProgress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectiveMinHeight = minHeight ?? theme.progressTheme.minHeight ?? 16;
 

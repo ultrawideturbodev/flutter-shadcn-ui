@@ -35,7 +35,7 @@ class ShadSelectFormField<T> extends ShadFormBuilderField<T> {
     double? minWidth,
     double? maxWidth,
     double? maxHeight,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     Widget? trailing,
     EdgeInsets? padding,
     EdgeInsets? optionsPadding,
@@ -64,8 +64,8 @@ class ShadSelectFormField<T> extends ShadFormBuilderField<T> {
     bool? shrinkWrap,
   }) : super(
           decorationBuilder: (context) =>
-              (ShadTheme.of(context).selectTheme.decoration ??
-                      const ShadDecoration())
+              (TurboTheme.of(context).selectTheme.decoration ??
+                      const TurboDecoration())
                   .mergeWith(decoration),
           builder: (field) {
             final state = field as _ShadFormBuilderSelectState;
@@ -131,7 +131,7 @@ class ShadSelectFormField<T> extends ShadFormBuilderField<T> {
     double? minWidth,
     double? maxWidth,
     double? maxHeight,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     Widget? trailing,
     EdgeInsets? padding,
     EdgeInsets? optionsPadding,
@@ -166,8 +166,8 @@ class ShadSelectFormField<T> extends ShadFormBuilderField<T> {
     bool? shrinkWrap,
   }) : super(
           decorationBuilder: (context) =>
-              (ShadTheme.of(context).selectTheme.decoration ??
-                      const ShadDecoration())
+              (TurboTheme.of(context).selectTheme.decoration ??
+                      const TurboDecoration())
                   .mergeWith(decoration),
           builder: (field) {
             final state = field as _ShadFormBuilderSelectState;
@@ -237,7 +237,7 @@ class ShadSelectFormField<T> extends ShadFormBuilderField<T> {
     bool closeOnTapOutside = true,
     double? minWidth,
     double? maxHeight,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     Widget? trailing,
     EdgeInsets? padding,
     EdgeInsets? optionsPadding,
@@ -281,8 +281,8 @@ class ShadSelectFormField<T> extends ShadFormBuilderField<T> {
         ),
         super(
           decorationBuilder: (context) =>
-              (ShadTheme.of(context).selectTheme.decoration ??
-                      const ShadDecoration())
+              (TurboTheme.of(context).selectTheme.decoration ??
+                      const TurboDecoration())
                   .mergeWith(decoration),
           builder: (field) {
             final state = field as _ShadFormBuilderSelectState;
@@ -362,7 +362,7 @@ class ShadSelectMultipleFormField<T> extends ShadFormBuilderField<List<T>> {
     double? minWidth,
     double? maxWidth,
     double? maxHeight,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     Widget? trailing,
     EdgeInsets? padding,
     EdgeInsets? optionsPadding,
@@ -384,8 +384,8 @@ class ShadSelectMultipleFormField<T> extends ShadFormBuilderField<List<T>> {
     bool allowDeselection = true,
   }) : super(
           decorationBuilder: (context) =>
-              (ShadTheme.of(context).selectTheme.decoration ??
-                      const ShadDecoration())
+              (TurboTheme.of(context).selectTheme.decoration ??
+                      const TurboDecoration())
                   .mergeWith(decoration),
           builder: (field) {
             final state = field as _ShadFormBuilderSelectMultipleState;
@@ -448,7 +448,7 @@ class ShadSelectMultipleFormField<T> extends ShadFormBuilderField<List<T>> {
     double? minWidth,
     double? maxWidth,
     double? maxHeight,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     Widget? trailing,
     EdgeInsets? padding,
     EdgeInsets? optionsPadding,
@@ -476,8 +476,8 @@ class ShadSelectMultipleFormField<T> extends ShadFormBuilderField<List<T>> {
     bool allowDeselection = true,
   }) : super(
           decorationBuilder: (context) =>
-              (ShadTheme.of(context).selectTheme.decoration ??
-                      const ShadDecoration())
+              (TurboTheme.of(context).selectTheme.decoration ??
+                      const TurboDecoration())
                   .mergeWith(decoration),
           builder: (field) {
             final state = field as _ShadFormBuilderSelectMultipleState;
@@ -544,7 +544,7 @@ class ShadSelectMultipleFormField<T> extends ShadFormBuilderField<List<T>> {
     bool closeOnTapOutside = true,
     double? minWidth,
     double? maxHeight,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     Widget? trailing,
     EdgeInsets? padding,
     EdgeInsets? optionsPadding,
@@ -575,8 +575,8 @@ class ShadSelectMultipleFormField<T> extends ShadFormBuilderField<List<T>> {
         ),
         super(
           decorationBuilder: (context) =>
-              (ShadTheme.of(context).selectTheme.decoration ??
-                      const ShadDecoration())
+              (TurboTheme.of(context).selectTheme.decoration ??
+                      const TurboDecoration())
                   .mergeWith(decoration),
           builder: (field) {
             final state = field as _ShadFormBuilderSelectMultipleState;

@@ -65,10 +65,10 @@ class ShadContextMenuTheme {
   final double? height;
 
   /// {@macro ShadContextMenuItem.buttonVariant}
-  final ShadButtonVariant? buttonVariant;
+  final TurboButtonVariant? buttonVariant;
 
   /// {@macro ShadContextMenuItem.decoration}
-  final ShadDecoration? itemDecoration;
+  final TurboDecoration? itemDecoration;
 
   /// {@macro ShadContextMenuItem.textStyle}
   final TextStyle? textStyle;
@@ -98,7 +98,7 @@ class ShadContextMenuTheme {
   final List<BoxShadow>? shadows;
 
   /// {@macro ShadPopover.decoration}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@macro ShadPopover.filter}
   final ImageFilter? filter;
@@ -123,7 +123,7 @@ class ShadContextMenuTheme {
       showDelay: t < .5 ? a.showDelay : b.showDelay,
       height: lerpDouble(a.height, b.height, t),
       buttonVariant: t < .5 ? a.buttonVariant : b.buttonVariant,
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       textStyle: TextStyle.lerp(a.textStyle, b.textStyle, t),
       trailingTextStyle:
           TextStyle.lerp(a.trailingTextStyle, b.trailingTextStyle, t),
@@ -136,7 +136,7 @@ class ShadContextMenuTheme {
           Color.lerp(a.selectedBackgroundColor, b.selectedBackgroundColor, t),
       closeOnTap: t < .5 ? a.closeOnTap : b.closeOnTap,
       itemDecoration:
-          ShadDecoration.lerp(a.itemDecoration, b.itemDecoration, t),
+          TurboDecoration.lerp(a.itemDecoration, b.itemDecoration, t),
       effects: t < .5 ? a.effects : b.effects,
       shadows: t < .5 ? a.shadows : b.shadows,
       filter: t < .5 ? a.filter : b.filter,
@@ -154,8 +154,8 @@ class ShadContextMenuTheme {
     ShadAnchorBase? anchor,
     Duration? showDelay,
     double? height,
-    ShadButtonVariant? buttonVariant,
-    ShadDecoration? decoration,
+    TurboButtonVariant? buttonVariant,
+    TurboDecoration? decoration,
     TextStyle? textStyle,
     TextStyle? trailingTextStyle,
     BoxConstraints? itemConstraints,
@@ -165,7 +165,7 @@ class ShadContextMenuTheme {
     bool? closeOnTap,
     List<Effect<dynamic>>? effects,
     List<BoxShadow>? shadows,
-    ShadDecoration? itemDecoration,
+    TurboDecoration? itemDecoration,
     ImageFilter? filter,
   }) {
     return ShadContextMenuTheme(

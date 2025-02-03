@@ -91,7 +91,7 @@ class _SelectPageState extends State<SelectPage> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return BaseScaffold(
       appBarTitle: 'Select',
       editable: [

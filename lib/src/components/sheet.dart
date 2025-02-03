@@ -23,7 +23,7 @@ Future<T?> showShadSheet<T>({
   List<Effect<dynamic>>? animateIn,
   List<Effect<dynamic>>? animateOut,
 }) {
-  final theme = ShadTheme.of(context);
+  final theme = TurboTheme.of(context);
   final effectiveSide = side ?? ShadSheetSide.bottom;
   final defaultAnimateIn = switch (effectiveSide) {
     ShadSheetSide.top => const SlideEffect(
@@ -391,7 +391,7 @@ class _ShadSheetState extends State<ShadSheet>
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final side = ShadSheetInheritedWidget.of(context);
     final mSize = MediaQuery.sizeOf(context);
 

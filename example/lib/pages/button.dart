@@ -13,12 +13,12 @@ class ButtonPage extends StatefulWidget {
 }
 
 class _ButtonPageState extends State<ButtonPage> {
-  var size = ShadButtonSize.regular;
+  var size = TurboButtonSize.regular;
   var enabled = true;
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return FocusTraversalGroup(
       policy: WidgetOrderTraversalPolicy(),
       child: BaseScaffold(
@@ -27,7 +27,7 @@ class _ButtonPageState extends State<ButtonPage> {
           MyEnumProperty(
             label: 'Size',
             value: size,
-            values: ShadButtonSize.values,
+            values: TurboButtonSize.values,
             onChanged: (value) {
               if (value != null) {
                 setState(() => size = value);
@@ -41,45 +41,45 @@ class _ButtonPageState extends State<ButtonPage> {
           ),
         ],
         children: [
-          ShadButton(
+          TurboButton(
             size: size,
             enabled: enabled,
             child: const Text('Primary'),
             onPressed: () => print('Primary'),
           ),
-          ShadButton.secondary(
+          TurboButton.secondary(
             size: size,
             enabled: enabled,
             child: const Text('Secondary'),
             onPressed: () => print('Secondary'),
           ),
-          ShadButton.destructive(
+          TurboButton.destructive(
             size: size,
             enabled: enabled,
             child: const Text('Destructive'),
           ),
-          ShadButton.outline(
+          TurboButton.outline(
             size: size,
             enabled: enabled,
             child: const Text('Outline'),
           ),
-          ShadButton.ghost(
+          TurboButton.ghost(
             size: size,
             enabled: enabled,
             child: const Text('Ghost'),
           ),
-          ShadButton.link(
+          TurboButton.link(
             size: size,
             enabled: enabled,
             child: const Text('Link'),
           ),
-          ShadButton(
+          TurboButton(
             size: size,
             enabled: enabled,
             icon: const Icon(LucideIcons.mail),
             child: const Text('Login with Email'),
           ),
-          ShadButton(
+          TurboButton(
             size: size,
             enabled: enabled,
             icon: SizedBox.square(
@@ -91,7 +91,7 @@ class _ButtonPageState extends State<ButtonPage> {
             ),
             child: const Text('Please wait'),
           ),
-          ShadButton(
+          TurboButton(
             size: size,
             enabled: enabled,
             gradient: const LinearGradient(colors: [
@@ -110,7 +110,7 @@ class _ButtonPageState extends State<ButtonPage> {
           ),
           ComponentView(
             label: 'Icon',
-            child: ShadButton.outline(
+            child: TurboButton.outline(
               size: size,
               enabled: enabled,
               icon: const Icon(LucideIcons.chevronRight),

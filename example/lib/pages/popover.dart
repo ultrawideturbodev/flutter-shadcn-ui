@@ -27,7 +27,7 @@ class _PopoverPageState extends State<PopoverPage> {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = ShadTheme.of(context).textTheme;
+    final textTheme = TurboTheme.of(context).textTheme;
     return BaseScaffold(
       appBarTitle: 'Popover',
       children: [
@@ -69,7 +69,7 @@ class _PopoverPageState extends State<PopoverPage> {
               ],
             ),
           ),
-          child: ShadButton.outline(
+          child: TurboButton.outline(
             onPressed: popoverController.toggle,
             child: const Text('Open popover'),
           ),

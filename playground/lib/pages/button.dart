@@ -24,51 +24,51 @@ class ButtonPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: switch (style) {
-          PlagroundButtonStyle.primary => ShadButton(
+          PlagroundButtonStyle.primary => TurboButton(
               child: const Text('Primary'),
               onPressed: () {},
             ),
-          PlagroundButtonStyle.secondary => ShadButton.secondary(
+          PlagroundButtonStyle.secondary => TurboButton.secondary(
               child: const Text('Secondary'),
               onPressed: () {},
             ),
-          PlagroundButtonStyle.destructive => ShadButton.destructive(
+          PlagroundButtonStyle.destructive => TurboButton.destructive(
               child: const Text('Destructive'),
               onPressed: () {},
             ),
-          PlagroundButtonStyle.outline => ShadButton.outline(
+          PlagroundButtonStyle.outline => TurboButton.outline(
               child: const Text('Outline'),
               onPressed: () {},
             ),
-          PlagroundButtonStyle.ghost => ShadButton.ghost(
+          PlagroundButtonStyle.ghost => TurboButton.ghost(
               child: const Text('Ghost'),
               onPressed: () {},
             ),
-          PlagroundButtonStyle.link => ShadButton.link(
+          PlagroundButtonStyle.link => TurboButton.link(
               child: const Text('Link'),
               onPressed: () {},
             ),
-          PlagroundButtonStyle.icon => ShadButton.outline(
+          PlagroundButtonStyle.icon => TurboButton.outline(
               icon: const Icon(LucideIcons.chevronRight),
               onPressed: () {},
             ),
-          PlagroundButtonStyle.textIcon => ShadButton(
+          PlagroundButtonStyle.textIcon => TurboButton(
               onPressed: () {},
               icon: const Icon(LucideIcons.mail),
               child: const Text('Login with Email'),
             ),
-          PlagroundButtonStyle.loading => ShadButton(
+          PlagroundButtonStyle.loading => TurboButton(
               onPressed: () {},
               icon: SizedBox.square(
                 dimension: 16,
                 child: CircularProgressIndicator(
                   strokeWidth: 2,
-                  color: ShadTheme.of(context).colorScheme.primaryForeground,
+                  color: TurboTheme.of(context).colorScheme.primaryForeground,
                 ),
               ),
               child: const Text('Please wait'),
             ),
-          PlagroundButtonStyle.gradientShadow => ShadButton(
+          PlagroundButtonStyle.gradientShadow => TurboButton(
               onPressed: () {},
               gradient: const LinearGradient(colors: [
                 Colors.cyan,

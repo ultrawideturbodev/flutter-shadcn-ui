@@ -43,7 +43,7 @@ class _CardPageState extends State<CardPage> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return BaseScaffold(
       appBarTitle: 'Card',
       children: [
@@ -54,11 +54,11 @@ class _CardPageState extends State<CardPage> {
           footer: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              ShadButton.outline(
+              TurboButton.outline(
                 child: const Text('Cancel'),
                 onPressed: () {},
               ),
-              ShadButton(
+              TurboButton(
                 child: const Text('Deploy'),
                 onPressed: () {},
               ),
@@ -94,7 +94,7 @@ class _CardPageState extends State<CardPage> {
           width: 380,
           title: const Text('Notifications'),
           description: const Text('You have 3 unread messages.'),
-          footer: ShadButton(
+          footer: TurboButton(
             width: double.infinity,
             icon: const Padding(
               padding: EdgeInsets.only(right: 8),

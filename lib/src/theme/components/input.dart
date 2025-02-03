@@ -17,7 +17,7 @@ class ShadInputTheme {
   });
 
   final bool merge;
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
   final EdgeInsets? padding;
   final TextStyle? style;
   final TextStyle? placeholderStyle;
@@ -35,7 +35,7 @@ class ShadInputTheme {
     if (identical(a, b)) return a;
     return ShadInputTheme(
       merge: b.merge,
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       padding: EdgeInsets.lerp(a.padding, b.padding, t),
       style: TextStyle.lerp(a.style, b.style, t),
       placeholderStyle:
@@ -49,7 +49,7 @@ class ShadInputTheme {
 
   ShadInputTheme copyWith({
     bool? merge,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     EdgeInsets? padding,
     TextStyle? style,
     TextStyle? placeholderStyle,

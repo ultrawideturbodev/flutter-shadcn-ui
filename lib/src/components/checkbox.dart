@@ -42,7 +42,7 @@ class ShadCheckbox extends StatefulWidget {
   final FocusNode? focusNode;
 
   /// The decoration of the checkbox.
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// The size of the checkbox, defaults to 16.
   final double? size;
@@ -115,14 +115,14 @@ class _ShadCheckboxState extends State<ShadCheckbox> {
 
   @override
   Widget build(BuildContext context) {
-    assert(debugCheckHasShadTheme(context));
-    final theme = ShadTheme.of(context);
+    assert(debugCheckHasTurboTheme(context));
+    final theme = TurboTheme.of(context);
 
     final effectiveColor =
         widget.color ?? theme.checkboxTheme.color ?? theme.colorScheme.primary;
 
     final effectiveDecoration = (theme.checkboxTheme.decoration ??
-            const ShadDecoration())
+            const TurboDecoration())
         .mergeWith(widget.decoration)
         .copyWith(color: widget.value ? effectiveColor : Colors.transparent);
 
@@ -157,10 +157,10 @@ class _ShadCheckboxState extends State<ShadCheckbox> {
               onTap();
             },
           },
-          child: ShadFocusable(
+          child: TurboFocusable(
             focusNode: focusNode,
             builder: (context, focused, child) {
-              return ShadDecorator(
+              return TurboDecorator(
                 focused: focused,
                 decoration: effectiveDecoration,
                 child: child,

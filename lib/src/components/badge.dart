@@ -91,7 +91,7 @@ class _ShadBadgeState extends State<ShadBadge> {
     super.dispose();
   }
 
-  ShadBadgeTheme badgeTheme(ShadThemeData theme) {
+  ShadBadgeTheme badgeTheme(TurboThemeData theme) {
     return switch (widget.variant) {
       ShadBadgeVariant.primary => theme.primaryBadgeTheme,
       ShadBadgeVariant.secondary => theme.secondaryBadgeTheme,
@@ -100,34 +100,34 @@ class _ShadBadgeState extends State<ShadBadge> {
     };
   }
 
-  Color? background(ShadThemeData theme) {
+  Color? background(TurboThemeData theme) {
     return widget.backgroundColor ?? badgeTheme(theme).backgroundColor;
   }
 
-  Color? hoverBackground(ShadThemeData theme) {
+  Color? hoverBackground(TurboThemeData theme) {
     return widget.hoverBackgroundColor ??
         badgeTheme(theme).hoverBackgroundColor;
   }
 
-  Color? foreground(ShadThemeData theme) {
+  Color? foreground(TurboThemeData theme) {
     return widget.foregroundColor ?? badgeTheme(theme).foregroundColor;
   }
 
-  ShapeBorder shape(ShadThemeData theme) {
+  ShapeBorder shape(TurboThemeData theme) {
     return widget.shape ?? badgeTheme(theme).shape ?? const StadiumBorder();
   }
 
-  EdgeInsets? padding(ShadThemeData theme) {
+  EdgeInsets? padding(TurboThemeData theme) {
     return widget.padding ?? badgeTheme(theme).padding;
   }
 
   @override
   Widget build(BuildContext context) {
-    assert(debugCheckHasShadTheme(context));
-    final theme = ShadTheme.of(context);
+    assert(debugCheckHasTurboTheme(context));
+    final theme = TurboTheme.of(context);
     return Semantics(
       container: true,
-      child: ShadGestureDetector(
+      child: TurboGestureDetector(
         onHoverChange: (value) => isHovered.value = value,
         onTap: widget.onPressed,
         child: ValueListenableBuilder(

@@ -47,11 +47,11 @@ class _MyAppState extends State<MyApp> {
       routerConfig: router,
       themeMode: theme == 'dark' ? ThemeMode.dark : ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      theme: ShadThemeData(
+      theme: TurboThemeData(
         colorScheme: getShadColorScheme(themeColor, false),
         brightness: Brightness.light,
       ),
-      darkTheme: ShadThemeData(
+      darkTheme: TurboThemeData(
         colorScheme: getShadColorScheme(themeColor, true),
         brightness: Brightness.dark,
       ),

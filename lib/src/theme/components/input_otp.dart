@@ -38,7 +38,7 @@ class ShadInputOTPTheme {
   final EdgeInsets? padding;
 
   /// {@macro ShadInputOTPSlot.decoration}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@macro ShadInputOTPSlot.firstRadius}
   final BorderRadius? firstRadius;
@@ -65,7 +65,7 @@ class ShadInputOTPTheme {
       width: lerpDouble(a.width, b.width, t),
       height: lerpDouble(a.height, b.height, t),
       padding: EdgeInsets.lerp(a.padding, b.padding, t),
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       firstRadius: BorderRadius.lerp(a.firstRadius, b.firstRadius, t),
       lastRadius: BorderRadius.lerp(a.lastRadius, b.lastRadius, t),
       singleRadius: BorderRadius.lerp(a.singleRadius, b.singleRadius, t),
@@ -80,7 +80,7 @@ class ShadInputOTPTheme {
     double? width,
     double? height,
     EdgeInsets? padding,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     BorderRadius? firstRadius,
     BorderRadius? lastRadius,
     BorderRadius? singleRadius,

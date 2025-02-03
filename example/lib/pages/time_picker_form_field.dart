@@ -22,7 +22,7 @@ class _TimePickerFormFieldPageState extends State<TimePickerFormFieldPage> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return ShadForm(
       key: formKey,
       enabled: enabled,
@@ -61,7 +61,7 @@ class _TimePickerFormFieldPageState extends State<TimePickerFormFieldPage> {
                   validator: (v) => v == null ? 'A time is required' : null,
                 ),
                 const SizedBox(height: 16),
-                ShadButton(
+                TurboButton(
                   child: const Text('Submit'),
                   onPressed: () {
                     print('submitted');

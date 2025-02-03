@@ -35,10 +35,10 @@ class ShadTooltipTheme {
   final EdgeInsetsGeometry? padding;
 
   /// {@macro tooltip.decoration}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@macro tooltip.hoverStrategies}
-  final ShadHoverStrategies? hoverStrategies;
+  final TurboHoverStrategies? hoverStrategies;
 
   final Duration? longPressDuration;
 
@@ -58,7 +58,7 @@ class ShadTooltipTheme {
           : b.showDuration,
       effects: b.effects,
       padding: EdgeInsetsGeometry.lerp(a.padding, b.padding, t),
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       anchor: b.anchor,
       hoverStrategies: b.hoverStrategies,
       longPressDuration:
@@ -74,9 +74,9 @@ class ShadTooltipTheme {
     Duration? showDuration,
     List<Effect<dynamic>>? effects,
     EdgeInsetsGeometry? padding,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     ShadAnchorBase? anchor,
-    ShadHoverStrategies? hoverStrategies,
+    TurboHoverStrategies? hoverStrategies,
     Duration? longPressDuration,
   }) {
     return ShadTooltipTheme(

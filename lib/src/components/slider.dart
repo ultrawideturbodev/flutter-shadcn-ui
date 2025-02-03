@@ -91,7 +91,7 @@ class _ShadSliderState extends State<ShadSlider> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final mTheme = Theme.of(context);
 
     final effectiveMouseCursor = widget.mouseCursor ??
@@ -143,7 +143,7 @@ class _ShadSliderState extends State<ShadSlider> {
     final effectiveThumbRadius =
         widget.thumbRadius ?? theme.sliderTheme.thumbRadius ?? 10.0;
 
-    return ShadFocusable(
+    return TurboFocusable(
       skipTraversal: true,
       builder: (context, focused, child) {
         return Theme(

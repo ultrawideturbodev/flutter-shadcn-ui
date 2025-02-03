@@ -22,7 +22,7 @@ enum ShadAppType {
 }
 
 class ShadApp extends StatefulWidget {
-  /// Creates a [ShadApp] providing a [ShadTheme].
+  /// Creates a [ShadApp] providing a [TurboTheme].
   const ShadApp({
     super.key,
     this.navigatorKey,
@@ -108,7 +108,7 @@ class ShadApp extends StatefulWidget {
         appBuilder = null,
         type = ShadAppType.shadcn;
 
-  /// Creates a [MaterialApp] wrapped by a [ShadTheme].
+  /// Creates a [MaterialApp] wrapped by a [TurboTheme].
   const ShadApp.material({
     super.key,
     this.navigatorKey,
@@ -151,7 +151,7 @@ class ShadApp extends StatefulWidget {
         appBuilder = null,
         type = ShadAppType.material;
 
-  /// Creates a [MaterialApp] wrapped by a [ShadTheme] that uses the [Router] instead of a [Navigator].
+  /// Creates a [MaterialApp] wrapped by a [TurboTheme] that uses the [Router] instead of a [Navigator].
   const ShadApp.materialRouter({
     super.key,
     this.theme,
@@ -194,7 +194,7 @@ class ShadApp extends StatefulWidget {
         appBuilder = null,
         type = ShadAppType.material;
 
-  /// Creates a [CupertinoApp] wrapped by a [ShadTheme].
+  /// Creates a [CupertinoApp] wrapped by a [TurboTheme].
   const ShadApp.cupertino({
     super.key,
     this.navigatorKey,
@@ -237,7 +237,7 @@ class ShadApp extends StatefulWidget {
         appBuilder = null,
         type = ShadAppType.cupertino;
 
-  /// Creates a [CupertinoApp] wrapped by a [ShadTheme] that uses the [Router] instead of a [Navigator].
+  /// Creates a [CupertinoApp] wrapped by a [TurboTheme] that uses the [Router] instead of a [Navigator].
   const ShadApp.cupertinoRouter({
     super.key,
     this.theme,
@@ -333,15 +333,15 @@ class ShadApp extends StatefulWidget {
   /// Default visual properties, like colors fonts and shapes, for this app's
   /// shad widgets.
   ///
-  /// A second [darkTheme] [ShadThemeData] value, which is used to provide a
+  /// A second [darkTheme] [TurboThemeData] value, which is used to provide a
   /// dark version of the user interface can also be specified. [themeMode] will
   /// control which theme will be used if a [darkTheme] is provided.
   ///
   /// The default value of this property is the value of
   /// `ShadThemeData(brightness: Brightness.light)`.
-  final ShadThemeData? theme;
+  final TurboThemeData? theme;
 
-  /// The [ShadThemeData] to use when a 'dark mode' is requested by the
+  /// The [TurboThemeData] to use when a 'dark mode' is requested by the
   /// system.
   ///
   /// Some host platforms allow the users to select a system-wide 'dark mode',
@@ -349,13 +349,13 @@ class ShadApp extends StatefulWidget {
   /// dark theme just for this application. This is theme that will be used for
   /// such cases. [themeMode] will control which theme will be used.
   ///
-  /// This theme should have a [ShadThemeData.brightness] set to
+  /// This theme should have a [TurboThemeData.brightness] set to
   /// [Brightness.dark].
   ///
   /// Uses [theme] instead when null. Defaults to the value of
   /// [ShadThemeData(brightness: Brightness.light)] when both [darkTheme] and
   /// [theme] are null.
-  final ShadThemeData? darkTheme;
+  final TurboThemeData? darkTheme;
 
   /// Determines which theme will be used by the application if both [theme]
   /// and [darkTheme] are provided.
@@ -572,7 +572,7 @@ class ShadApp extends StatefulWidget {
   ///    in a subtree.
   final ScrollBehavior scrollBehavior;
 
-  /// The curve used to animated from one [ShadThemeData] to another, defaults
+  /// The curve used to animated from one [TurboThemeData] to another, defaults
   /// to [Curves.linear].
   final Curve themeCurve;
 
@@ -641,23 +641,23 @@ class _ShadAppState extends State<ShadApp> {
     );
   }
 
-  ShadThemeData theme(BuildContext context) {
+  TurboThemeData theme(BuildContext context) {
     final mode = widget.themeMode ?? ThemeMode.system;
     final platformBrightness = MediaQuery.platformBrightnessOf(context);
     final useDarkStyle = mode == ThemeMode.dark ||
         (mode == ThemeMode.system && platformBrightness == Brightness.dark);
 
     final data = () {
-      late ShadThemeData result;
+      late TurboThemeData result;
       if (useDarkStyle) {
         result = widget.darkTheme ??
-            ShadThemeData(
+            TurboThemeData(
               colorScheme: const ShadSlateColorScheme.dark(),
               brightness: Brightness.dark,
             );
       } else {
         result = widget.theme ??
-            ShadThemeData(
+            TurboThemeData(
               colorScheme: const ShadSlateColorScheme.light(),
               brightness: Brightness.light,
             );

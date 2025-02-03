@@ -21,7 +21,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         Padding(
           padding: const EdgeInsets.only(right: 8),
-          child: ShadButton.ghost(
+          child: TurboButton.ghost(
             onPressed: () {
               context.update<ThemeMode>(
                 (value) =>

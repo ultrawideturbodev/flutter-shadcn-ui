@@ -14,7 +14,7 @@ class ResizablePage extends StatefulWidget {
 class _ResizablePageState extends State<ResizablePage> {
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return BaseScaffold(
       appBarTitle: 'Resizable',
       children: [

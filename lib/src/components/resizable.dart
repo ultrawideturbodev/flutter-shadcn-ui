@@ -164,7 +164,7 @@ class ShadResizablePanelGroup extends StatefulWidget {
   final VoidCallback? onDividerDoubleTap;
   final bool? resetOnDoubleTap;
   final Color? dividerColor;
-  final ShadDecoration? handleDecoration;
+  final TurboDecoration? handleDecoration;
   final EdgeInsets? handlePadding;
   final double? handleSize;
 
@@ -261,7 +261,7 @@ class ShadResizablePanelGroupState extends State<ShadResizablePanelGroup> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final effectiveShowHandle =
         widget.showHandle ?? theme.resizableTheme.showHandle ?? false;
     final effectiveDividerSize =
@@ -277,7 +277,7 @@ class ShadResizablePanelGroupState extends State<ShadResizablePanelGroup> {
         theme.resizableTheme.dividerColor ??
         theme.colorScheme.border;
 
-    final effectiveHandleDecoration = ShadDecoration(
+    final effectiveHandleDecoration = TurboDecoration(
       color: theme.colorScheme.border,
       border: ShadBorder.all(
         radius: const BorderRadius.all(Radius.circular(4)),
@@ -367,7 +367,7 @@ class ShadResizablePanelGroupState extends State<ShadResizablePanelGroup> {
 
         // lazy, will be initialized when the handle is needed
         late final handle = widget.handleIcon ??
-            ShadDecorator(
+            TurboDecorator(
               decoration: effectiveHandleDecoration,
               child: Padding(
                 padding: effectiveHandlePadding,

@@ -40,7 +40,7 @@ class CardProject extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return ShadCard(
       width: 350,
       title: Text('Create project', style: theme.textTheme.h4),
@@ -48,11 +48,11 @@ class CardProject extends StatelessWidget {
       footer: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          ShadButton.outline(
+          TurboButton.outline(
             child: const Text('Cancel'),
             onPressed: () {},
           ),
-          ShadButton(
+          TurboButton(
             child: const Text('Deploy'),
             onPressed: () {},
           ),
@@ -118,12 +118,12 @@ class _CardNotificationsState extends State<CardNotifications> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return ShadCard(
       width: 380,
       title: const Text('Notifications'),
       description: const Text('You have 3 unread messages.'),
-      footer: ShadButton(
+      footer: TurboButton(
         width: double.infinity,
         icon: const Padding(
           padding: EdgeInsets.only(right: 8),

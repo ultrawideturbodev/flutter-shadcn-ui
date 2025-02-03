@@ -318,7 +318,7 @@ class ShadInputOTPSlot extends StatefulWidget {
   /// {@template ShadInputOTPSlot.decoration}
   /// The decoration of the slot
   /// {@endtemplate}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@template ShadInputOTPSlot.firstRadius}
   /// The radius applied to the first slot of each group
@@ -406,7 +406,7 @@ class _ShadInputOTPSlotState extends State<ShadInputOTPSlot> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     // Watching the OTP provider for changes
     final otpProvider = context.watch<ShadInputOTPState>();
@@ -474,7 +474,7 @@ class _ShadInputOTPSlotState extends State<ShadInputOTPSlot> {
     final effectiveWidth = widget.width ?? theme.inputOTPTheme.width ?? 40.0;
     final effectiveHeight = widget.height ?? theme.inputOTPTheme.height ?? 40.0;
 
-    final defaultDecoration = ShadDecoration(
+    final defaultDecoration = TurboDecoration(
       disableSecondaryBorder: true,
       focusedBorder: ShadBorder.all(
         color: theme.colorScheme.ring,
@@ -491,7 +491,7 @@ class _ShadInputOTPSlotState extends State<ShadInputOTPSlot> {
         .mergeWith(theme.inputOTPTheme.decoration)
         .mergeWith(widget.decoration)
         .mergeWith(
-          ShadDecoration(
+          TurboDecoration(
             border: ShadBorder(
               radius: effectiveRadius,
               left: isFirstInGroup

@@ -99,7 +99,7 @@ class ShadCalendarTheme {
   final double? navigationButtonDisabledOpacity;
 
   /// {@macro ShadCalendar.decoration}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@macro ShadCalendar.spacingBetweenMonths}
   final double? spacingBetweenMonths;
@@ -153,7 +153,7 @@ class ShadCalendarTheme {
   final EdgeInsets? dayButtonPadding;
 
   /// {@macro ShadCalendar.dayButtonDecoration}
-  final ShadDecoration? dayButtonDecoration;
+  final TurboDecoration? dayButtonDecoration;
 
   /// {@macro ShadCalendar.selectedDayButtonTextStyle}
   final TextStyle? selectedDayButtonTextStyle;
@@ -165,16 +165,16 @@ class ShadCalendarTheme {
   final TextStyle? dayButtonTextStyle;
 
   /// {@macro ShadCalendar.dayButtonVariant}
-  final ShadButtonVariant? dayButtonVariant;
+  final TurboButtonVariant? dayButtonVariant;
 
   /// {@macro ShadCalendar.selectedDayButtonVariant}
-  final ShadButtonVariant? selectedDayButtonVariant;
+  final TurboButtonVariant? selectedDayButtonVariant;
 
   /// {@macro ShadCalendar.insideRangeDayButtonVariant}
-  final ShadButtonVariant? insideRangeDayButtonVariant;
+  final TurboButtonVariant? insideRangeDayButtonVariant;
 
   /// {@macro ShadCalendar.todayButtonVariant}
-  final ShadButtonVariant? todayButtonVariant;
+  final TurboButtonVariant? todayButtonVariant;
 
   /// {@macro ShadCalendar.gridMainAxisSpacing}
   final double? gridMainAxisSpacing;
@@ -186,10 +186,10 @@ class ShadCalendarTheme {
   final TextStyle? dayButtonOutsideMonthTextStyle;
 
   /// {@macro ShadCalendar.dayButtonOutsideMonthVariant}
-  final ShadButtonVariant? dayButtonOutsideMonthVariant;
+  final TurboButtonVariant? dayButtonOutsideMonthVariant;
 
   /// {@macro ShadCalendar.selectedDayButtonOusideMonthVariant}
-  final ShadButtonVariant? selectedDayButtonOusideMonthVariant;
+  final TurboButtonVariant? selectedDayButtonOusideMonthVariant;
 
   /// {@macro ShadCalendar.captionLayout}
   final ShadCalendarCaptionLayout? captionLayout;
@@ -270,7 +270,7 @@ class ShadCalendarTheme {
         b.navigationButtonDisabledOpacity,
         t,
       ),
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       spacingBetweenMonths:
           lerpDouble(a.spacingBetweenMonths, b.spacingBetweenMonths, t),
       runSpacingBetweenMonths: lerpDouble(
@@ -325,7 +325,7 @@ class ShadCalendarTheme {
         b.dayButtonPadding,
         t,
       ),
-      dayButtonDecoration: ShadDecoration.lerp(
+      dayButtonDecoration: TurboDecoration.lerp(
         a.dayButtonDecoration,
         b.dayButtonDecoration,
         t,
@@ -601,7 +601,7 @@ class ShadCalendarTheme {
     IconData? forwardNavigationButtonIconData,
     EdgeInsets? navigationButtonPadding,
     double? navigationButtonDisabledOpacity,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     double? spacingBetweenMonths,
     double? runSpacingBetweenMonths,
     BoxConstraints? monthConstraints,
@@ -619,19 +619,19 @@ class ShadCalendarTheme {
     double? dayButtonSize,
     double? dayButtonOutsideMonthOpacity,
     EdgeInsets? dayButtonPadding,
-    ShadDecoration? dayButtonDecoration,
+    TurboDecoration? dayButtonDecoration,
     TextStyle? selectedDayButtonTextStyle,
     TextStyle? insideRangeDayButtonTextStyle,
     TextStyle? dayButtonTextStyle,
-    ShadButtonVariant? dayButtonVariant,
-    ShadButtonVariant? selectedDayButtonVariant,
-    ShadButtonVariant? insideRangeDayButtonVariant,
-    ShadButtonVariant? todayButtonVariant,
+    TurboButtonVariant? dayButtonVariant,
+    TurboButtonVariant? selectedDayButtonVariant,
+    TurboButtonVariant? insideRangeDayButtonVariant,
+    TurboButtonVariant? todayButtonVariant,
     double? gridMainAxisSpacing,
     double? gridCrossAxisSpacing,
     TextStyle? dayButtonOutsideMonthTextStyle,
-    ShadButtonVariant? dayButtonOutsideMonthVariant,
-    ShadButtonVariant? selectedDayButtonOusideMonthVariant,
+    TurboButtonVariant? dayButtonOutsideMonthVariant,
+    TurboButtonVariant? selectedDayButtonOusideMonthVariant,
     ShadCalendarCaptionLayout? captionLayout,
     bool? hideWeekdayNames,
     bool? showOutsideDays,

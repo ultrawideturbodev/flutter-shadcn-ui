@@ -15,11 +15,11 @@ class ShadInputDecorator extends StatelessWidget {
   final Widget? label;
   final Widget? error;
   final Widget? description;
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final effectiveDecoration = theme.decoration.mergeWith(decoration);
     final hasError = effectiveDecoration.hasError ?? false;
 

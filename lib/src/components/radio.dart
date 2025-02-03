@@ -102,7 +102,7 @@ class ShadRadioGroupState<T> extends State<ShadRadioGroup<T>> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectiveAxis = widget.axis ?? theme.radioTheme.axis ?? Axis.vertical;
     final effectiveSpacing = widget.spacing ?? theme.radioTheme.spacing ?? 4;
@@ -160,7 +160,7 @@ class ShadRadio<T> extends StatefulWidget {
   final FocusNode? focusNode;
 
   /// The decoration of the radio.
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// The size of the radio, defaults to 16.
   final double? size;
@@ -217,8 +217,8 @@ class _ShadRadioState<T> extends State<ShadRadio<T>> {
 
   @override
   Widget build(BuildContext context) {
-    assert(debugCheckHasShadTheme(context));
-    final theme = ShadTheme.of(context);
+    assert(debugCheckHasTurboTheme(context));
+    final theme = TurboTheme.of(context);
     final inheritedRadioGroup =
         context.watch<ShadRadioGroupState<dynamic>>() as ShadRadioGroupState<T>;
 
@@ -233,7 +233,7 @@ class _ShadRadioState<T> extends State<ShadRadio<T>> {
     final enabled = widget.enabled && inheritedRadioGroup.widget.enabled;
 
     final effectiveDecoration =
-        (theme.radioTheme.decoration ?? const ShadDecoration())
+        (theme.radioTheme.decoration ?? const TurboDecoration())
             .mergeWith(widget.decoration);
 
     final effectiveSize = widget.size ?? theme.radioTheme.size ?? 16;
@@ -263,10 +263,10 @@ class _ShadRadioState<T> extends State<ShadRadio<T>> {
               onTap();
             },
           },
-          child: ShadFocusable(
+          child: TurboFocusable(
             focusNode: focusNode,
             builder: (context, focused, child) {
-              return ShadDecorator(
+              return TurboDecorator(
                 focused: focused,
                 decoration: effectiveDecoration,
                 child: child,

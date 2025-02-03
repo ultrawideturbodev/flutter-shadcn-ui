@@ -112,7 +112,7 @@ class App extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           themeMode: themeMode,
           routes: routes,
-          theme: ShadThemeData(
+          theme: TurboThemeData(
             brightness: Brightness.light,
             colorScheme: const ShadZincColorScheme.light(),
             // Example with google fonts
@@ -124,7 +124,7 @@ class App extends StatelessWidget {
             // Example to disable the secondary border
             // disableSecondaryBorder: true,
           ),
-          darkTheme: ShadThemeData(
+          darkTheme: TurboThemeData(
             brightness: Brightness.dark,
             colorScheme: const ShadZincColorScheme.dark(),
             // Example of custom font family

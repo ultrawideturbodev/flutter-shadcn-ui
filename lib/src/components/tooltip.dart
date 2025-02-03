@@ -67,7 +67,7 @@ class ShadTooltip extends StatefulWidget {
   /// {@template tooltip.decoration}
   /// The decoration of the tooltip.
   /// {@endtemplate}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@template tooltip.anchor}
   /// The position of the [ShadTooltip], defaults to
@@ -78,7 +78,7 @@ class ShadTooltip extends StatefulWidget {
   /// {@template tooltip.hoverStrategies}
   /// The hover strategies to use for the tooltip on devices with touchscreens.
   /// {@endtemplate}
-  final ShadHoverStrategies? hoverStrategies;
+  final TurboHoverStrategies? hoverStrategies;
 
   /// The controller that controls the visibility of the [ShadTooltip].
   final ShadTooltipController? controller;
@@ -123,12 +123,12 @@ class _ShadTooltipState extends State<ShadTooltip> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectiveEffects = widget.effects ?? theme.tooltipTheme.effects ?? [];
     final effectivePadding = widget.padding ?? theme.tooltipTheme.padding;
     final effectiveDecoration =
-        (theme.tooltipTheme.decoration ?? const ShadDecoration())
+        (theme.tooltipTheme.decoration ?? const TurboDecoration())
             .mergeWith(widget.decoration);
 
     final effectiveAnchor = widget.anchor ??
@@ -145,7 +145,7 @@ class _ShadTooltipState extends State<ShadTooltip> {
     final effectiveLongPressDuration =
         widget.longPressDuration ?? theme.tooltipTheme.longPressDuration;
 
-    return ShadGestureDetector(
+    return TurboGestureDetector(
       longPressDuration: effectiveLongPressDuration,
       hoverStrategies: effectiveHoverStrategies,
       onHoverChange: (value) async {
@@ -174,7 +174,7 @@ class _ShadTooltipState extends State<ShadTooltip> {
             visible: controller.isOpen,
             anchor: effectiveAnchor,
             portalBuilder: (context) {
-              Widget tooltip = ShadDecorator(
+              Widget tooltip = TurboDecorator(
                 decoration: effectiveDecoration,
                 child: Padding(
                   padding: effectivePadding ?? EdgeInsets.zero,

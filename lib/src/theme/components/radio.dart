@@ -32,7 +32,7 @@ class ShadRadioTheme {
 
   final Duration? duration;
 
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   final EdgeInsets? padding;
 
@@ -69,7 +69,7 @@ class ShadRadioTheme {
       merge: b.merge,
       color: Color.lerp(a.color, b.color, t),
       duration: b.duration,
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       size: lerpDouble(a.size, b.size, t),
       padding: EdgeInsets.lerp(a.padding, b.padding, t),
       circleSize: lerpDouble(a.circleSize, b.circleSize, t),
@@ -87,7 +87,7 @@ class ShadRadioTheme {
     Color? color,
     double? size,
     Duration? duration,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     EdgeInsets? padding,
     double? circleSize,
     Axis? axis,

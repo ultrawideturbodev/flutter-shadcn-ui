@@ -597,7 +597,7 @@ class ShadCalendar extends StatefulWidget {
   /// )
   /// ```
   /// {@endtemplate}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@template ShadCalendar.spacingBetweenMonths}
   /// The spacing between months, defaults to 16
@@ -720,7 +720,7 @@ class ShadCalendar extends StatefulWidget {
   ///   ),
   /// ```
   /// {@endtemplate}
-  final ShadDecoration? dayButtonDecoration;
+  final TurboDecoration? dayButtonDecoration;
 
   /// {@template ShadCalendar.selectedDayButtonTextStyle}
   /// The text style of the selected day button, defaults to
@@ -755,26 +755,26 @@ class ShadCalendar extends StatefulWidget {
   final TextStyle? dayButtonTextStyle;
 
   /// {@template ShadCalendar.dayButtonVariant}
-  /// The variant of the day button, defaults to [ShadButtonVariant.ghost]
+  /// The variant of the day button, defaults to [TurboButtonVariant.ghost]
   /// {@endtemplate}
-  final ShadButtonVariant? dayButtonVariant;
+  final TurboButtonVariant? dayButtonVariant;
 
   /// {@template ShadCalendar.selectedDayButtonVariant}
   /// The variant of the selected day button, defaults to
-  /// [ShadButtonVariant.primary]
+  /// [TurboButtonVariant.primary]
   /// {@endtemplate}
-  final ShadButtonVariant? selectedDayButtonVariant;
+  final TurboButtonVariant? selectedDayButtonVariant;
 
   /// {@template ShadCalendar.insideRangeDayButtonVariant}
   /// The variant of the inside range day button, defaults to
-  /// [ShadButtonVariant.secondary]
+  /// [TurboButtonVariant.secondary]
   /// {@endtemplate}
-  final ShadButtonVariant? insideRangeDayButtonVariant;
+  final TurboButtonVariant? insideRangeDayButtonVariant;
 
   /// {@template ShadCalendar.todayButtonVariant}
-  /// The variant of the today button, defaults to [ShadButtonVariant.secondary]
+  /// The variant of the today button, defaults to [TurboButtonVariant.secondary]
   /// {@endtemplate}
-  final ShadButtonVariant? todayButtonVariant;
+  final TurboButtonVariant? todayButtonVariant;
 
   /// {@template ShadCalendar.gridMainAxisSpacing}
   /// The main axis spacing of the grid, defaults to 8
@@ -794,15 +794,15 @@ class ShadCalendar extends StatefulWidget {
 
   /// {@template ShadCalendar.dayButtonOutsideMonthVariant}
   /// The variant of the day buttons outside the month, defaults to
-  /// [ShadButtonVariant.ghost]
+  /// [TurboButtonVariant.ghost]
   /// {@endtemplate}
-  final ShadButtonVariant? dayButtonOutsideMonthVariant;
+  final TurboButtonVariant? dayButtonOutsideMonthVariant;
 
   /// {@template ShadCalendar.selectedDayButtonOusideMonthVariant}
   /// The variant of the selected day buttons outside the month, defaults to
-  /// [ShadButtonVariant.secondary]
+  /// [TurboButtonVariant.secondary]
   /// {@endtemplate}
-  final ShadButtonVariant? selectedDayButtonOusideMonthVariant;
+  final TurboButtonVariant? selectedDayButtonOusideMonthVariant;
 
   /// {@template ShadCalendar.allowDeselection}
   /// Whether to allow deselection of the selected date, defaults to false.
@@ -841,27 +841,27 @@ class _ShadCalendarState extends State<ShadCalendar> {
 
   bool get effectiveShowOutsideDays =>
       widget.showOutsideDays ??
-      ShadTheme.of(context, listen: false).calendarTheme.showOutsideDays ??
+      TurboTheme.of(context, listen: false).calendarTheme.showOutsideDays ??
       true;
 
   bool get effectiveHideWeekdayNames =>
       widget.hideWeekdayNames ??
-      ShadTheme.of(context, listen: false).calendarTheme.hideWeekdayNames ??
+      TurboTheme.of(context, listen: false).calendarTheme.hideWeekdayNames ??
       false;
 
   bool get effectiveShowWeekNumbers =>
       widget.showWeekNumbers ??
-      ShadTheme.of(context, listen: false).calendarTheme.showWeekNumbers ??
+      TurboTheme.of(context, listen: false).calendarTheme.showWeekNumbers ??
       false;
 
   int get effectiveWeekStartsOn =>
       widget.weekStartsOn ??
-      ShadTheme.of(context, listen: false).calendarTheme.weekStartsOn ??
+      TurboTheme.of(context, listen: false).calendarTheme.weekStartsOn ??
       1;
 
   bool get effectiveFixedWeeks =>
       widget.fixedWeeks ??
-      ShadTheme.of(context, listen: false).calendarTheme.fixedWeeks ??
+      TurboTheme.of(context, listen: false).calendarTheme.fixedWeeks ??
       false;
 
   bool enabled(DateTime date) {
@@ -1068,7 +1068,7 @@ class _ShadCalendarState extends State<ShadCalendar> {
       'When fixedWeeks is true, showOutsideDays must be true',
     );
 
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectiveCaptionLayout =
         widget.captionLayout ?? ShadCalendarCaptionLayout.label;
@@ -1137,7 +1137,7 @@ class _ShadCalendarState extends State<ShadCalendar> {
             .5;
 
     final effectiveDecoration =
-        (theme.calendarTheme.decoration ?? const ShadDecoration())
+        (theme.calendarTheme.decoration ?? const TurboDecoration())
             .mergeWith(widget.decoration);
 
     final effectiveSpacingBetweenMonths = widget.spacingBetweenMonths ??
@@ -1246,30 +1246,30 @@ class _ShadCalendarState extends State<ShadCalendar> {
 
     final effectiveDayButtonVariant = widget.dayButtonVariant ??
         theme.calendarTheme.dayButtonVariant ??
-        ShadButtonVariant.ghost;
+        TurboButtonVariant.ghost;
 
     final effectiveSelectedDayButtonVariant = widget.selectedDayButtonVariant ??
         theme.calendarTheme.selectedDayButtonVariant ??
-        ShadButtonVariant.primary;
+        TurboButtonVariant.primary;
 
     final effectiveInsideRangeDayButtonVariant =
         widget.insideRangeDayButtonVariant ??
             theme.calendarTheme.insideRangeDayButtonVariant ??
-            ShadButtonVariant.secondary;
+            TurboButtonVariant.secondary;
 
     final effectiveDayButtonOutsideMonthVariant =
         widget.dayButtonOutsideMonthVariant ??
             theme.calendarTheme.dayButtonOutsideMonthVariant ??
-            ShadButtonVariant.ghost;
+            TurboButtonVariant.ghost;
 
     final effectiveSelectedDayButtonOusideMonthVariant =
         widget.selectedDayButtonOusideMonthVariant ??
             theme.calendarTheme.selectedDayButtonOusideMonthVariant ??
-            ShadButtonVariant.secondary;
+            TurboButtonVariant.secondary;
 
     final effectiveTodayButtonVariant = widget.todayButtonVariant ??
         theme.calendarTheme.todayButtonVariant ??
-        ShadButtonVariant.secondary;
+        TurboButtonVariant.secondary;
 
     final effectiveAllowDeselection = widget.allowDeselection ??
         theme.calendarTheme.allowDeselection ??
@@ -1326,7 +1326,7 @@ class _ShadCalendarState extends State<ShadCalendar> {
       builder: (context, isHovered, _) {
         return Opacity(
           opacity: isHovered ? 1 : effectiveNavigationButtonDisabledOpacity,
-          child: ShadButton.outline(
+          child: TurboButton.outline(
             width: effectiveNavigationButtonSize,
             height: effectiveNavigationButtonSize,
             padding: effectiveNavigationButtonPadding,
@@ -1347,7 +1347,7 @@ class _ShadCalendarState extends State<ShadCalendar> {
       builder: (context, isHovered, _) {
         return Opacity(
           opacity: isHovered ? 1 : effectiveNavigationButtonDisabledOpacity,
-          child: ShadButton.outline(
+          child: TurboButton.outline(
             width: effectiveNavigationButtonSize,
             height: effectiveNavigationButtonSize,
             padding: effectiveNavigationButtonPadding,
@@ -1366,7 +1366,7 @@ class _ShadCalendarState extends State<ShadCalendar> {
 
     final columnsCount = effectiveShowWeekNumbers ? 8 : 7;
 
-    return ShadDecorator(
+    return TurboDecorator(
       decoration: effectiveDecoration,
       child: Wrap(
         spacing: effectiveSpacingBetweenMonths,
@@ -1581,7 +1581,7 @@ class _ShadCalendarState extends State<ShadCalendar> {
                     final isLastOfRow =
                         (index - (effectiveShowWeekNumbers ? 1 : 0)) % 7 == 6;
 
-                    final effectiveDayButtonDecoration = ShadDecoration(
+                    final effectiveDayButtonDecoration = TurboDecoration(
                       secondaryBorder:
                           const ShadBorder(padding: EdgeInsets.zero),
                       border: isInRange &&
@@ -1614,7 +1614,7 @@ class _ShadCalendarState extends State<ShadCalendar> {
                         opacity: isInMonth
                             ? 1
                             : effectiveDayButtonOutsideMonthOpacity,
-                        child: ShadButton.raw(
+                        child: TurboButton.raw(
                           variant: variant,
                           width: effectiveDayButtonSize,
                           height: effectiveDayButtonSize,

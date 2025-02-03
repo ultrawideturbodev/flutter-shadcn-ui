@@ -12,11 +12,11 @@ class DialogPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return BaseScaffold(
       appBarTitle: 'Dialog',
       children: [
-        ShadButton.outline(
+        TurboButton.outline(
           child: const Text('Edit Profile'),
           onPressed: () {
             showShadDialog(
@@ -25,7 +25,7 @@ class DialogPage extends StatelessWidget {
                 title: const Text('Edit Profile'),
                 description: const Text(
                     "Make changes to your profile here. Click save when you're done"),
-                actions: const [ShadButton(child: Text('Save changes'))],
+                actions: const [TurboButton(child: Text('Save changes'))],
                 child: Container(
                   width: 375,
                   padding: const EdgeInsets.symmetric(vertical: 20),
@@ -58,7 +58,7 @@ class DialogPage extends StatelessWidget {
             );
           },
         ),
-        ShadButton.outline(
+        TurboButton.outline(
           child: const Text('Show Dialog'),
           onPressed: () {
             showShadDialog(
@@ -72,11 +72,11 @@ class DialogPage extends StatelessWidget {
                   ),
                 ),
                 actions: [
-                  ShadButton.outline(
+                  TurboButton.outline(
                     child: const Text('Cancel'),
                     onPressed: () => Navigator.of(context).pop(false),
                   ),
-                  ShadButton(
+                  TurboButton(
                     child: const Text('Continue'),
                     onPressed: () => Navigator.of(context).pop(true),
                   ),

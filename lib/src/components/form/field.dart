@@ -58,7 +58,7 @@ class ShadFormBuilderField<T> extends FormField<T> {
   final ValueChanged<T?>? onChanged;
   final ValueTransformer<T?>? valueTransformer;
   final VoidCallback? onReset;
-  final ShadDecoration? Function(BuildContext context)? decorationBuilder;
+  final TurboDecoration? Function(BuildContext context)? decorationBuilder;
   final bool readOnly;
 
   @override
@@ -73,8 +73,8 @@ class ShadFormBuilderFieldState<F extends ShadFormBuilderField<T>, T>
 
   FocusNode get focusNode => widget.focusNode ?? _focusNode!;
 
-  ShadDecoration get decoration =>
-      (widget.decorationBuilder?.call(context) ?? const ShadDecoration())
+  TurboDecoration get decoration =>
+      (widget.decorationBuilder?.call(context) ?? const TurboDecoration())
           .copyWith(hasError: hasError);
 
   @override

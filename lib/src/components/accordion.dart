@@ -44,7 +44,7 @@ class ShadAccordionState<T> extends State<ShadAccordion<T>> {
 
   bool get maintainState {
     return widget.maintainState ??
-        ShadTheme.of(context, listen: false).accordionTheme.maintainState ??
+        TurboTheme.of(context, listen: false).accordionTheme.maintainState ??
         false;
   }
 
@@ -163,7 +163,7 @@ class _ShadAccordionItemState<T> extends State<ShadAccordionItem<T>>
     final inherited =
         context.watch<ShadAccordionState<dynamic>>() as ShadAccordionState<T>;
     final expanded = inherited.values.contains(widget.value);
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final effectiveSeparator = widget.separator ?? const Divider();
 
     final effectiveDuration =
@@ -247,7 +247,7 @@ class _ShadAccordionItemState<T> extends State<ShadAccordionItem<T>>
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            ShadGestureDetector(
+            TurboGestureDetector(
               cursor: SystemMouseCursors.click,
               onHoverChange: (value) => hovered.value = value,
               behavior: HitTestBehavior.opaque,
@@ -264,7 +264,7 @@ class _ShadAccordionItemState<T> extends State<ShadAccordionItem<T>>
                           inherited.toggle(widget.value);
                         },
                       },
-                      child: ShadFocusable(
+                      child: TurboFocusable(
                         focusNode: focusNode,
                         builder: (context, focused, child) {
                           return ValueListenableBuilder(

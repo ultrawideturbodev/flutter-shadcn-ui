@@ -75,7 +75,7 @@ class ShadToasterState extends State<ShadToaster>
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     return ShadToasterScope(
       shadMessengerState: this,
@@ -382,7 +382,7 @@ class _ShadToastState extends State<ShadToast> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectiveToastTheme = switch (widget.variant) {
       ShadToastVariant.primary => theme.primaryToastTheme,
@@ -394,7 +394,7 @@ class _ShadToastState extends State<ShadToast> {
     };
 
     final effectiveCloseIcon = widget.closeIcon ??
-        ShadButton.ghost(
+        TurboButton.ghost(
           icon: Icon(
             size: 16,
             widget.closeIconData ??

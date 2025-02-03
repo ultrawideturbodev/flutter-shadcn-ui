@@ -86,10 +86,10 @@ class ShadTimePickerTheme {
   final EdgeInsets? fieldPadding;
 
   /// {@macro ShadTimePicker.fieldDecoration}
-  final ShadDecoration? fieldDecoration;
+  final TurboDecoration? fieldDecoration;
 
   /// {@macro ShadTimePicker.periodDecoration}
-  final ShadDecoration? periodDecoration;
+  final TurboDecoration? periodDecoration;
 
   /// {@macro ShadTimePicker.hourLabel}
   final Widget? hourLabel;
@@ -142,9 +142,9 @@ class ShadTimePickerTheme {
       fieldWidth: t < .5 ? a.fieldWidth : b.fieldWidth,
       fieldPadding: EdgeInsets.lerp(a.fieldPadding, b.fieldPadding, t),
       fieldDecoration:
-          ShadDecoration.lerp(a.fieldDecoration, b.fieldDecoration, t),
+          TurboDecoration.lerp(a.fieldDecoration, b.fieldDecoration, t),
       periodDecoration:
-          ShadDecoration.lerp(a.periodDecoration, b.periodDecoration, t),
+          TurboDecoration.lerp(a.periodDecoration, b.periodDecoration, t),
       hourLabel: t < .5 ? a.hourLabel : b.hourLabel,
       minuteLabel: t < .5 ? a.minuteLabel : b.minuteLabel,
       secondLabel: t < .5 ? a.secondLabel : b.secondLabel,
@@ -174,8 +174,8 @@ class ShadTimePickerTheme {
     TextStyle? labelStyle,
     double? fieldWidth,
     EdgeInsets? fieldPadding,
-    ShadDecoration? fieldDecoration,
-    ShadDecoration? periodDecoration,
+    TurboDecoration? fieldDecoration,
+    TurboDecoration? periodDecoration,
     Widget? hourLabel,
     Widget? minuteLabel,
     Widget? secondLabel,

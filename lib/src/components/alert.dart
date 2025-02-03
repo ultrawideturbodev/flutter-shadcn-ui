@@ -68,7 +68,7 @@ class ShadAlert extends StatelessWidget {
   final Widget? title;
   final Widget? description;
   final TextDirection? textDirection;
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
   final EdgeInsets? iconPadding;
   final Color? iconColor;
   final TextStyle? titleStyle;
@@ -84,7 +84,7 @@ class ShadAlert extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectiveAlertTheme = variant == ShadAlertVariant.primary
         ? theme.primaryAlertTheme
@@ -94,7 +94,7 @@ class ShadAlert extends StatelessWidget {
         effectiveAlertTheme.iconPadding ??
         const EdgeInsets.only(right: 12);
 
-    final defaultDecoration = ShadDecoration(
+    final defaultDecoration = TurboDecoration(
       border: ShadBorder.all(
         color: theme.colorScheme.border,
         radius: theme.radius,
@@ -146,7 +146,7 @@ class ShadAlert extends StatelessWidget {
         effectiveAlertTheme.orderPolicy ??
         const WidgetOrderPolicy.linear();
 
-    return ShadDecorator(
+    return TurboDecorator(
       decoration: effectiveDecoration,
       child: Row(
         crossAxisAlignment: effectiveCrossAxisAlignment,

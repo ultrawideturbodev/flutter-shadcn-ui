@@ -62,7 +62,7 @@ class ShadDateRangePickerFormField
     Object? groupId,
 
     /// {@macro ShadDatePicker.calendarDecoration}
-    ShadDecoration? calendarDecoration,
+    TurboDecoration? calendarDecoration,
 
     /// {@macro ShadPopover.padding}
     EdgeInsets? popoverPadding,
@@ -215,7 +215,7 @@ class ShadDateRangePickerFormField
     EdgeInsets? dayButtonPadding,
 
     /// {@macro ShadCalendar.dayButtonDecoration}
-    ShadDecoration? dayButtonDecoration,
+    TurboDecoration? dayButtonDecoration,
 
     /// {@macro ShadCalendar.selectedDayButtonTextStyle}
     TextStyle? selectedDayButtonTextStyle,
@@ -227,16 +227,16 @@ class ShadDateRangePickerFormField
     TextStyle? dayButtonTextStyle,
 
     /// {@macro ShadCalendar.dayButtonVariant}
-    ShadButtonVariant? dayButtonVariant,
+    TurboButtonVariant? dayButtonVariant,
 
     /// {@macro ShadCalendar.selectedDayButtonVariant}
-    ShadButtonVariant? selectedDayButtonVariant,
+    TurboButtonVariant? selectedDayButtonVariant,
 
     /// {@macro ShadCalendar.insideRangeDayButtonVariant}
-    ShadButtonVariant? insideRangeDayButtonVariant,
+    TurboButtonVariant? insideRangeDayButtonVariant,
 
     /// {@macro ShadCalendar.todayButtonVariant}
-    ShadButtonVariant? todayButtonVariant,
+    TurboButtonVariant? todayButtonVariant,
 
     /// {@macro ShadCalendar.gridMainAxisSpacing}
     double? gridMainAxisSpacing,
@@ -248,10 +248,10 @@ class ShadDateRangePickerFormField
     TextStyle? dayButtonOutsideMonthTextStyle,
 
     /// {@macro ShadCalendar.dayButtonOutsideMonthVariant}
-    ShadButtonVariant? dayButtonOutsideMonthVariant,
+    TurboButtonVariant? dayButtonOutsideMonthVariant,
 
     /// {@macro ShadCalendar.selectedDayButtonOusideMonthVariant}
-    ShadButtonVariant? selectedDayButtonOusideMonthVariant,
+    TurboButtonVariant? selectedDayButtonOusideMonthVariant,
 
     // ---
     // POPOVER
@@ -270,7 +270,7 @@ class ShadDateRangePickerFormField
     List<BoxShadow>? shadows,
 
     /// {@macro ShadPopover.decoration}
-    ShadDecoration? popoverDecoration,
+    TurboDecoration? popoverDecoration,
 
     /// {@macro ShadPopover.filter}
     ImageFilter? filter,
@@ -301,10 +301,10 @@ class ShadDateRangePickerFormField
     Widget? buttonChild,
 
     /// {@macro ShadButton.variant}
-    ShadButtonVariant? buttonVariant,
+    TurboButtonVariant? buttonVariant,
 
     /// {@macro ShadButton.size}
-    ShadButtonSize? size,
+    TurboButtonSize? size,
 
     /// {@macro ShadButton.cursor}
     MouseCursor? cursor,
@@ -355,10 +355,10 @@ class ShadDateRangePickerFormField
     TextDecoration? hoverTextDecoration,
 
     /// {@macro ShadButton.decoration}
-    ShadDecoration? buttonDecoration,
+    TurboDecoration? buttonDecoration,
 
     /// {@macro ShadButton.statesController}
-    ShadStatesController? statesController,
+    TurboStatesController? statesController,
 
     /// {@macro ShadButton.gap}
     double? gap,
@@ -370,7 +370,7 @@ class ShadDateRangePickerFormField
     CrossAxisAlignment? crossAxisAlignment,
 
     /// {@macro ShadButton.hoverStrategies}
-    ShadHoverStrategies? hoverStrategies,
+    TurboHoverStrategies? hoverStrategies,
 
     /// {@macro ShadButton.onHoverChange}
     ValueChanged<bool>? onHoverChange,

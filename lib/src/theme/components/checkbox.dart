@@ -26,7 +26,7 @@ class ShadCheckboxTheme {
 
   final Duration? duration;
 
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   final EdgeInsets? padding;
 
@@ -46,7 +46,7 @@ class ShadCheckboxTheme {
       merge: b.merge,
       color: Color.lerp(a.color, b.color, t),
       duration: b.duration,
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       size: lerpDouble(a.size, b.size, t),
       padding: EdgeInsets.lerp(a.padding, b.padding, t),
       crossAxisAlignment: t < .5 ? a.crossAxisAlignment : b.crossAxisAlignment,
@@ -59,7 +59,7 @@ class ShadCheckboxTheme {
     Color? color,
     double? size,
     Duration? duration,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     EdgeInsets? padding,
     CrossAxisAlignment? crossAxisAlignment,
     WidgetOrderPolicy? orderPolicy,

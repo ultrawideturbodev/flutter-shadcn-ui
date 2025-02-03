@@ -19,11 +19,11 @@ class ToastPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return Scaffold(
       body: Center(
         child: switch (style) {
-          ToastStyle.schedule => ShadButton.outline(
+          ToastStyle.schedule => TurboButton.outline(
               child: const Text('Add to calendar'),
               onPressed: () {
                 ShadToaster.of(context).show(
@@ -31,7 +31,7 @@ class ToastPage extends StatelessWidget {
                     title: const Text('Scheduled: Catch up'),
                     description:
                         const Text('Friday, February 10, 2023 at 5:57 PM'),
-                    action: ShadButton.outline(
+                    action: TurboButton.outline(
                       child: const Text('Undo'),
                       onPressed: () => ShadToaster.of(context).hide(),
                     ),
@@ -39,7 +39,7 @@ class ToastPage extends StatelessWidget {
                 );
               },
             ),
-          ToastStyle.destructive => ShadButton.outline(
+          ToastStyle.destructive => TurboButton.outline(
               child: const Text('Show Toast'),
               onPressed: () {
                 ShadToaster.of(context).show(
@@ -47,8 +47,8 @@ class ToastPage extends StatelessWidget {
                     title: const Text('Uh oh! Something went wrong'),
                     description:
                         const Text('There was a problem with your request'),
-                    action: ShadButton.destructive(
-                      decoration: ShadDecoration(
+                    action: TurboButton.destructive(
+                      decoration: TurboDecoration(
                         border: ShadBorder.all(
                           color: theme.colorScheme.destructiveForeground,
                         ),
@@ -60,7 +60,7 @@ class ToastPage extends StatelessWidget {
                 );
               },
             ),
-          ToastStyle.simple => ShadButton.outline(
+          ToastStyle.simple => TurboButton.outline(
               child: const Text('Show Toast'),
               onPressed: () {
                 ShadToaster.of(context).show(
@@ -70,7 +70,7 @@ class ToastPage extends StatelessWidget {
                 );
               },
             ),
-          ToastStyle.withTitle => ShadButton.outline(
+          ToastStyle.withTitle => TurboButton.outline(
               child: const Text('Show Toast'),
               onPressed: () {
                 ShadToaster.of(context).show(
@@ -81,7 +81,7 @@ class ToastPage extends StatelessWidget {
                 );
               },
             ),
-          ToastStyle.withAction => ShadButton.outline(
+          ToastStyle.withAction => TurboButton.outline(
               child: const Text('Show Toast'),
               onPressed: () {
                 ShadToaster.of(context).show(
@@ -89,7 +89,7 @@ class ToastPage extends StatelessWidget {
                     title: const Text('Uh oh! Something went wrong'),
                     description:
                         const Text('There was a problem with your request'),
-                    action: ShadButton.outline(
+                    action: TurboButton.outline(
                       child: const Text('Try again'),
                       onPressed: () => ShadToaster.of(context).hide(),
                     ),

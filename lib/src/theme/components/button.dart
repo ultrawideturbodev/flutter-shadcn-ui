@@ -1,3 +1,4 @@
+
 import 'dart:ui';
 
 import 'package:flutter/foundation.dart';
@@ -8,12 +9,12 @@ import 'package:shadcn_ui/src/theme/components/decorator.dart';
 import 'package:shadcn_ui/src/utils/extensions/order_policy.dart';
 import 'package:shadcn_ui/src/utils/gesture_detector.dart';
 
-/// The theme for ShadButton.
+/// The theme for TurboButton.
 ///
 /// Use this class to override some properties to all buttons in just one place.
 @immutable
-class ShadButtonTheme {
-  const ShadButtonTheme({
+class TurboButtonTheme {
+  const TurboButtonTheme({
     this.merge = true,
     this.cursor,
     this.size,
@@ -44,8 +45,8 @@ class ShadButtonTheme {
   final bool merge;
 
   final MouseCursor? cursor;
-  final ShadButtonSize? size;
-  final ShadButtonSizesTheme? sizesTheme;
+  final TurboButtonSize? size;
+  final TurboButtonSizesTheme? sizesTheme;
   final Color? backgroundColor;
   final Color? hoverBackgroundColor;
   final Color? foregroundColor;
@@ -56,36 +57,36 @@ class ShadButtonTheme {
   final Gradient? gradient;
   final TextDecoration? textDecoration;
   final TextDecoration? hoverTextDecoration;
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
   final double? width;
   final double? height;
   final Duration? longPressDuration;
-  final ShadHoverStrategies? hoverStrategies;
+  final TurboHoverStrategies? hoverStrategies;
 
-  /// {@macro ShadButton.mainAxisAlignment}
+  /// {@macro TurboButton.mainAxisAlignment}
   final MainAxisAlignment? mainAxisAlignment;
 
-  /// {@macro ShadButton.crossAxisAlignment}
+  /// {@macro TurboButton.crossAxisAlignment}
   final CrossAxisAlignment? crossAxisAlignment;
   final TextDirection? textDirection;
 
-  /// {@macro ShadButton.gap}
+  /// {@macro TurboButton.gap}
   final double? gap;
 
-  /// {@macro ShadButton.orderPolicy}
+  /// {@macro TurboButton.orderPolicy}
   final WidgetOrderPolicy? orderPolicy;
 
-  /// {@macro ShadButton.expands}
+  /// {@macro TurboButton.expands}
   final bool? expands;
 
-  static ShadButtonTheme lerp(
-    ShadButtonTheme a,
-    ShadButtonTheme b,
+  static TurboButtonTheme lerp(
+    TurboButtonTheme a,
+    TurboButtonTheme b,
     double t,
   ) {
     if (identical(a, b)) return a;
-    return ShadButtonTheme(
-      sizesTheme: ShadButtonSizesTheme.lerp(
+    return TurboButtonTheme(
+      sizesTheme: TurboButtonSizesTheme.lerp(
         a.sizesTheme,
         b.sizesTheme,
         t,
@@ -107,7 +108,7 @@ class ShadButtonTheme {
           t < 0.5 ? a.hoverTextDecoration : b.hoverTextDecoration,
       cursor: t < 0.5 ? a.cursor : b.cursor,
       size: t < 0.5 ? a.size : b.size,
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       width: lerpDouble(a.width, b.width, t),
       height: lerpDouble(a.height, b.height, t),
       mainAxisAlignment: t < 0.5 ? a.mainAxisAlignment : b.mainAxisAlignment,
@@ -124,11 +125,11 @@ class ShadButtonTheme {
     );
   }
 
-  ShadButtonTheme copyWith({
+  TurboButtonTheme copyWith({
     MouseCursor? cursor,
     MouseCursor? disabledCursor,
-    ShadButtonSize? size,
-    ShadButtonSizesTheme? sizesTheme,
+    TurboButtonSize? size,
+    TurboButtonSizesTheme? sizesTheme,
     Color? backgroundColor,
     Color? hoverBackgroundColor,
     Color? foregroundColor,
@@ -139,19 +140,19 @@ class ShadButtonTheme {
     Gradient? gradient,
     TextDecoration? textDecoration,
     TextDecoration? hoverTextDecoration,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     double? width,
     double? height,
     MainAxisAlignment? mainAxisAlignment,
     CrossAxisAlignment? crossAxisAlignment,
     Duration? longPressDuration,
-    ShadHoverStrategies? hoverStrategies,
+    TurboHoverStrategies? hoverStrategies,
     TextDirection? textDirection,
     double? gap,
     WidgetOrderPolicy? orderPolicy,
     bool? expands,
   }) {
-    return ShadButtonTheme(
+    return TurboButtonTheme(
       cursor: cursor ?? this.cursor,
       size: size ?? this.size,
       sizesTheme: sizesTheme ?? this.sizesTheme,
@@ -181,7 +182,7 @@ class ShadButtonTheme {
     );
   }
 
-  ShadButtonTheme mergeWith(ShadButtonTheme? other) {
+  TurboButtonTheme mergeWith(TurboButtonTheme? other) {
     if (other == null) return this;
     if (!other.merge) return other;
     return copyWith(
@@ -215,7 +216,7 @@ class ShadButtonTheme {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is ShadButtonTheme &&
+    return other is TurboButtonTheme &&
         other.merge == merge &&
         other.cursor == cursor &&
         other.size == size &&
@@ -273,10 +274,10 @@ class ShadButtonTheme {
   }
 }
 
-// The theme for an individual size of ShadButton.
+// The theme for an individual size of TurboButton.
 @immutable
-class ShadButtonSizeTheme {
-  const ShadButtonSizeTheme({
+class TurboButtonSizeTheme {
+  const TurboButtonSizeTheme({
     this.merge = true,
     required this.height,
     required this.padding,
@@ -287,32 +288,32 @@ class ShadButtonSizeTheme {
   final EdgeInsets padding;
   final double? width;
 
-  ShadButtonSizeTheme copyWith({
+  TurboButtonSizeTheme copyWith({
     double? height,
     EdgeInsets? padding,
     double? width,
   }) {
-    return ShadButtonSizeTheme(
+    return TurboButtonSizeTheme(
       height: height ?? this.height,
       padding: padding ?? this.padding,
       width: width ?? this.width,
     );
   }
 
-  static ShadButtonSizeTheme? lerp(
-    ShadButtonSizeTheme? a,
-    ShadButtonSizeTheme? b,
+  static TurboButtonSizeTheme? lerp(
+    TurboButtonSizeTheme? a,
+    TurboButtonSizeTheme? b,
     double t,
   ) {
     if (identical(a, b)) return a;
-    return ShadButtonSizeTheme(
+    return TurboButtonSizeTheme(
       height: lerpDouble(a?.height, b?.height, t)!,
       padding: EdgeInsets.lerp(a?.padding, b?.padding, t)!,
       width: lerpDouble(a?.width, b?.width, t),
     );
   }
 
-  ShadButtonSizeTheme mergeWith(ShadButtonSizeTheme? other) {
+  TurboButtonSizeTheme mergeWith(TurboButtonSizeTheme? other) {
     if (other == null) return this;
     if (!other.merge) return other;
     return copyWith(
@@ -326,7 +327,7 @@ class ShadButtonSizeTheme {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is ShadButtonSizeTheme &&
+    return other is TurboButtonSizeTheme &&
         other.height == height &&
         other.padding == padding &&
         other.width == width;
@@ -336,10 +337,10 @@ class ShadButtonSizeTheme {
   int get hashCode => height.hashCode ^ padding.hashCode ^ width.hashCode;
 }
 
-// The theme for the predefined sizes of ShadButton.
+// The theme for the predefined sizes of TurboButton.
 @immutable
-class ShadButtonSizesTheme {
-  const ShadButtonSizesTheme({
+class TurboButtonSizesTheme {
+  const TurboButtonSizesTheme({
     this.merge = true,
     this.regular,
     this.sm,
@@ -347,32 +348,32 @@ class ShadButtonSizesTheme {
     this.icon,
   });
   final bool merge;
-  final ShadButtonSizeTheme? regular;
-  final ShadButtonSizeTheme? sm;
-  final ShadButtonSizeTheme? lg;
-  final ShadButtonSizeTheme? icon;
+  final TurboButtonSizeTheme? regular;
+  final TurboButtonSizeTheme? sm;
+  final TurboButtonSizeTheme? lg;
+  final TurboButtonSizeTheme? icon;
 
-  static ShadButtonSizesTheme? lerp(
-    ShadButtonSizesTheme? a,
-    ShadButtonSizesTheme? b,
+  static TurboButtonSizesTheme? lerp(
+    TurboButtonSizesTheme? a,
+    TurboButtonSizesTheme? b,
     double t,
   ) {
     if (identical(a, b)) return a;
-    return ShadButtonSizesTheme(
-      regular: ShadButtonSizeTheme.lerp(a?.regular, b?.regular, t),
-      sm: ShadButtonSizeTheme.lerp(a?.sm, b?.sm, t),
-      lg: ShadButtonSizeTheme.lerp(a?.lg, b?.lg, t),
-      icon: ShadButtonSizeTheme.lerp(a?.icon, b?.icon, t),
+    return TurboButtonSizesTheme(
+      regular: TurboButtonSizeTheme.lerp(a?.regular, b?.regular, t),
+      sm: TurboButtonSizeTheme.lerp(a?.sm, b?.sm, t),
+      lg: TurboButtonSizeTheme.lerp(a?.lg, b?.lg, t),
+      icon: TurboButtonSizeTheme.lerp(a?.icon, b?.icon, t),
     );
   }
 
-  ShadButtonSizesTheme copyWith({
-    ShadButtonSizeTheme? regular,
-    ShadButtonSizeTheme? sm,
-    ShadButtonSizeTheme? lg,
-    ShadButtonSizeTheme? icon,
+  TurboButtonSizesTheme copyWith({
+    TurboButtonSizeTheme? regular,
+    TurboButtonSizeTheme? sm,
+    TurboButtonSizeTheme? lg,
+    TurboButtonSizeTheme? icon,
   }) {
-    return ShadButtonSizesTheme(
+    return TurboButtonSizesTheme(
       regular: regular ?? this.regular,
       sm: sm ?? this.sm,
       lg: lg ?? this.lg,
@@ -380,7 +381,7 @@ class ShadButtonSizesTheme {
     );
   }
 
-  ShadButtonSizesTheme mergeWith(ShadButtonSizesTheme? other) {
+  TurboButtonSizesTheme mergeWith(TurboButtonSizesTheme? other) {
     if (other == null) return this;
     if (!other.merge) return other;
     return copyWith(
@@ -394,7 +395,7 @@ class ShadButtonSizesTheme {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-    return other is ShadButtonSizesTheme &&
+    return other is TurboButtonSizesTheme &&
         other.regular == regular &&
         other.sm == sm &&
         other.lg == lg &&

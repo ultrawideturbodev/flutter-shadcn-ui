@@ -44,11 +44,11 @@ class _InputPageState extends State<InputPage> {
             padding: EdgeInsets.all(4.0),
             child: Icon(LucideIcons.lock),
           ),
-          suffix: ShadButton(
+          suffix: TurboButton(
             width: 24,
             height: 24,
             padding: EdgeInsets.zero,
-            decoration: const ShadDecoration(
+            decoration: const TurboDecoration(
               secondaryBorder: ShadBorder.none,
               secondaryFocusedBorder: ShadBorder.none,
             ),

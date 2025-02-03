@@ -5,7 +5,7 @@ import 'package:shadcn_ui/src/utils/responsive.dart';
 extension ShadBreakpointsExt on BuildContext {
   ShadBreakpoint get breakpoint {
     final width = MediaQuery.sizeOf(this).width;
-    final breakpoints = ShadTheme.of(this).breakpoints;
+    final breakpoints = TurboTheme.of(this).breakpoints;
     return breakpoints.fromWidth(width);
   }
 }

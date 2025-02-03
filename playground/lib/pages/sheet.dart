@@ -22,7 +22,7 @@ class SheetPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: switch (style) {
-            SheetStyle.primary => ShadButton.outline(
+            SheetStyle.primary => TurboButton.outline(
                 child: const Text('Open'),
                 onPressed: () => showShadSheet(
                   side: ShadSheetSide.right,
@@ -38,7 +38,7 @@ class SheetPage extends StatelessWidget {
                   Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      ShadButton.outline(
+                      TurboButton.outline(
                         width: 100,
                         child: const Text('Top'),
                         onPressed: () => showShadSheet(
@@ -48,7 +48,7 @@ class SheetPage extends StatelessWidget {
                               const EditProfileSheet(side: ShadSheetSide.top),
                         ),
                       ),
-                      ShadButton.outline(
+                      TurboButton.outline(
                         width: 100,
                         child: const Text('Bottom'),
                         onPressed: () => showShadSheet(
@@ -63,7 +63,7 @@ class SheetPage extends StatelessWidget {
                   Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      ShadButton.outline(
+                      TurboButton.outline(
                         width: 100,
                         child: const Text('Right'),
                         onPressed: () => showShadSheet(
@@ -73,7 +73,7 @@ class SheetPage extends StatelessWidget {
                               const EditProfileSheet(side: ShadSheetSide.right),
                         ),
                       ),
-                      ShadButton.outline(
+                      TurboButton.outline(
                         width: 100,
                         child: const Text('Left'),
                         onPressed: () => showShadSheet(
@@ -109,7 +109,7 @@ class EditProfileSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     return ShadSheet(
       constraints: side == ShadSheetSide.left || side == ShadSheetSide.right
           ? const BoxConstraints(maxWidth: 512)
@@ -118,7 +118,7 @@ class EditProfileSheet extends StatelessWidget {
       description: const Text(
           "Make changes to your profile here. Click save when you're done"),
       actions: const [
-        ShadButton(child: Text('Save changes')),
+        TurboButton(child: Text('Save changes')),
       ],
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),

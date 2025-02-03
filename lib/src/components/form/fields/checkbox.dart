@@ -21,7 +21,7 @@ class ShadCheckboxFormField extends ShadFormBuilderField<bool> {
     super.restorationId,
     required bool initialValue,
     super.focusNode,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     String? Function(bool)? validator,
     double? size,
     Duration? duration,
@@ -42,8 +42,8 @@ class ShadCheckboxFormField extends ShadFormBuilderField<bool> {
           onChanged: onChanged == null ? null : (v) => onChanged(v ?? false),
           validator: validator == null ? null : (v) => validator(v ?? false),
           decorationBuilder: (context) =>
-              (ShadTheme.of(context).checkboxTheme.decoration ??
-                      const ShadDecoration())
+              (TurboTheme.of(context).checkboxTheme.decoration ??
+                      const TurboDecoration())
                   .mergeWith(decoration),
           builder: (field) {
             final state = field as _ShadFormBuilderCheckboxState;

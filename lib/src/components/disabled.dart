@@ -18,8 +18,8 @@ class ShadDisabled extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    assert(debugCheckHasShadTheme(context));
-    final theme = ShadTheme.of(context);
+    assert(debugCheckHasTurboTheme(context));
+    final theme = TurboTheme.of(context);
 
     Widget view = AbsorbPointer(
       absorbing: disabled,

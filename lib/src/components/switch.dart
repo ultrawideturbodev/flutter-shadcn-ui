@@ -64,7 +64,7 @@ class ShadSwitch extends StatefulWidget {
   final Duration? duration;
 
   /// The decoration of the switch.
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// An optional label for the switch, displayed on the right side if
   /// the [direction] is `TextDirection.ltr`.
@@ -128,8 +128,8 @@ class _ShadSwitchState extends State<ShadSwitch>
 
   @override
   Widget build(BuildContext context) {
-    assert(debugCheckHasShadTheme(context));
-    final theme = ShadTheme.of(context);
+    assert(debugCheckHasTurboTheme(context));
+    final theme = TurboTheme.of(context);
     final effectiveThumbColor = widget.thumbColor ??
         theme.switchTheme.thumbColor ??
         theme.colorScheme.background;
@@ -148,7 +148,7 @@ class _ShadSwitchState extends State<ShadSwitch>
     final effectiveDuration = widget.duration ?? 100.milliseconds;
 
     final effectiveDecoration =
-        (theme.switchTheme.decoration ?? const ShadDecoration())
+        (theme.switchTheme.decoration ?? const TurboDecoration())
             .mergeWith(widget.decoration)
             .copyWith(
               color: widget.value
@@ -176,10 +176,10 @@ class _ShadSwitchState extends State<ShadSwitch>
               onTap();
             },
           },
-          child: ShadFocusable(
+          child: TurboFocusable(
             focusNode: focusNode,
             builder: (context, focused, child) {
-              return ShadDecorator(
+              return TurboDecorator(
                 focused: focused,
                 decoration: effectiveDecoration,
                 child: child,
@@ -207,8 +207,8 @@ class _ShadSwitchState extends State<ShadSwitch>
                       child: SizedBox(
                         width: effectiveThumbSize,
                         height: effectiveThumbSize,
-                        child: ShadDecorator(
-                          decoration: ShadDecoration(
+                        child: TurboDecorator(
+                          decoration: TurboDecoration(
                             color: effectiveThumbColor,
                             shape: BoxShape.circle,
                             merge: false,

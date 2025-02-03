@@ -54,7 +54,7 @@ class ShadCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectivePadding =
         padding ?? theme.cardTheme.padding ?? const EdgeInsets.all(24);

@@ -110,7 +110,7 @@ class ShadTimePickerFormField extends ShadFormBuilderField<ShadTimeOfDay> {
     EdgeInsets? fieldPadding,
 
     /// {@macro ShadTimePicker.fieldDecoration}
-    ShadDecoration? fieldDecoration,
+    TurboDecoration? fieldDecoration,
   }) : super(
           builder: (field) {
             final state = field as _ShadFormBuilderTimePickerState;
@@ -271,10 +271,10 @@ class ShadTimePickerFormField extends ShadFormBuilderField<ShadTimeOfDay> {
     EdgeInsets? fieldPadding,
 
     /// {@macro ShadTimePicker.fieldDecoration}
-    ShadDecoration? fieldDecoration,
+    TurboDecoration? fieldDecoration,
 
     /// {@macro ShadTimePicker.periodDecoration}
-    ShadDecoration? periodDecoration,
+    TurboDecoration? periodDecoration,
   }) : super(
           builder: (field) {
             final state = field as _ShadFormBuilderTimePickerState;
@@ -442,10 +442,10 @@ class ShadTimePickerFormField extends ShadFormBuilderField<ShadTimeOfDay> {
     EdgeInsets? fieldPadding,
 
     /// {@macro ShadTimePicker.fieldDecoration}
-    ShadDecoration? fieldDecoration,
+    TurboDecoration? fieldDecoration,
 
     /// {@macro ShadTimePicker.periodDecoration}
-    ShadDecoration? periodDecoration,
+    TurboDecoration? periodDecoration,
   }) : super(
           builder: (field) {
             final state = field as _ShadFormBuilderTimePickerState;

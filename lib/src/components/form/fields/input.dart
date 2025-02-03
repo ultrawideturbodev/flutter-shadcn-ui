@@ -25,7 +25,7 @@ class ShadInputFormField extends ShadFormBuilderField<String> {
     void Function(String)? onChanged,
     super.valueTransformer,
     super.onReset,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     Widget? placeholder,
     TextMagnifierConfiguration magnifierConfiguration =
         TextMagnifierConfiguration.disabled,
@@ -95,8 +95,8 @@ class ShadInputFormField extends ShadFormBuilderField<String> {
           validator: validator == null ? null : (v) => validator(v ?? ''),
           onChanged: onChanged == null ? null : (v) => onChanged(v ?? ''),
           decorationBuilder: (context) =>
-              (ShadTheme.of(context).inputTheme.decoration ??
-                      const ShadDecoration())
+              (TurboTheme.of(context).inputTheme.decoration ??
+                      const TurboDecoration())
                   .mergeWith(decoration),
           builder: (field) {
             final state = field as _ShadFormBuilderInputState;

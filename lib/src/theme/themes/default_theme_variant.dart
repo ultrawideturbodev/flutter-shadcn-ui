@@ -55,54 +55,54 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
   final ShadTextTheme effectiveTextTheme;
 
   @override
-  ShadButtonTheme primaryButtonTheme() {
-    return ShadButtonTheme(
+  TurboButtonTheme primaryButtonTheme() {
+    return TurboButtonTheme(
       backgroundColor: colorScheme.primary,
       hoverBackgroundColor: colorScheme.primary.withValues(alpha: .9),
       foregroundColor: colorScheme.primaryForeground,
       hoverForegroundColor: colorScheme.primaryForeground,
       decoration:
-          ShadDecoration(border: ShadBorder.all(radius: radius, width: 0)),
+          TurboDecoration(border: ShadBorder.all(radius: radius, width: 0)),
       gap: 8,
       expands: false,
     );
   }
 
   @override
-  ShadButtonTheme secondaryButtonTheme() {
-    return ShadButtonTheme(
+  TurboButtonTheme secondaryButtonTheme() {
+    return TurboButtonTheme(
       backgroundColor: colorScheme.secondary,
       hoverBackgroundColor: colorScheme.secondary.withValues(alpha: .8),
       foregroundColor: colorScheme.secondaryForeground,
       hoverForegroundColor: colorScheme.secondaryForeground,
       decoration:
-          ShadDecoration(border: ShadBorder.all(radius: radius, width: 0)),
+          TurboDecoration(border: ShadBorder.all(radius: radius, width: 0)),
       gap: 8,
       expands: false,
     );
   }
 
   @override
-  ShadButtonTheme destructiveButtonTheme() {
-    return ShadButtonTheme(
+  TurboButtonTheme destructiveButtonTheme() {
+    return TurboButtonTheme(
       backgroundColor: colorScheme.destructive,
       hoverBackgroundColor: colorScheme.destructive.withValues(alpha: .9),
       foregroundColor: colorScheme.destructiveForeground,
       hoverForegroundColor: colorScheme.destructiveForeground,
       decoration:
-          ShadDecoration(border: ShadBorder.all(radius: radius, width: 0)),
+          TurboDecoration(border: ShadBorder.all(radius: radius, width: 0)),
       gap: 8,
       expands: false,
     );
   }
 
   @override
-  ShadButtonTheme outlineButtonTheme() {
-    return ShadButtonTheme(
+  TurboButtonTheme outlineButtonTheme() {
+    return TurboButtonTheme(
       hoverBackgroundColor: colorScheme.accent,
       foregroundColor: colorScheme.primary,
       hoverForegroundColor: colorScheme.accentForeground,
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         border: ShadBorder.all(
           radius: radius,
           color: colorScheme.input,
@@ -115,21 +115,21 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
   }
 
   @override
-  ShadButtonTheme ghostButtonTheme() {
-    return ShadButtonTheme(
+  TurboButtonTheme ghostButtonTheme() {
+    return TurboButtonTheme(
       hoverBackgroundColor: colorScheme.accent,
       foregroundColor: colorScheme.primary,
       hoverForegroundColor: colorScheme.accentForeground,
       decoration:
-          ShadDecoration(border: ShadBorder.all(radius: radius, width: 0)),
+          TurboDecoration(border: ShadBorder.all(radius: radius, width: 0)),
       gap: 8,
       expands: false,
     );
   }
 
   @override
-  ShadButtonTheme linkButtonTheme() {
-    return ShadButtonTheme(
+  TurboButtonTheme linkButtonTheme() {
+    return TurboButtonTheme(
       foregroundColor: colorScheme.primary,
       hoverForegroundColor: colorScheme.primary,
       hoverTextDecoration: TextDecoration.underline,
@@ -139,21 +139,21 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
   }
 
   @override
-  ShadButtonSizesTheme buttonSizesTheme() {
-    return const ShadButtonSizesTheme(
-      regular: ShadButtonSizeTheme(
+  TurboButtonSizesTheme buttonSizesTheme() {
+    return const TurboButtonSizesTheme(
+      regular: TurboButtonSizeTheme(
         height: 40,
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       ),
-      sm: ShadButtonSizeTheme(
+      sm: TurboButtonSizeTheme(
         height: 36,
         padding: EdgeInsets.symmetric(horizontal: 12),
       ),
-      lg: ShadButtonSizeTheme(
+      lg: TurboButtonSizeTheme(
         height: 44,
         padding: EdgeInsets.symmetric(horizontal: 32, vertical: 8),
       ),
-      icon: ShadButtonSizeTheme(
+      icon: TurboButtonSizeTheme(
         height: 40,
         width: 40,
         padding: EdgeInsets.zero,
@@ -221,7 +221,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
         MoveEffect(begin: Offset(0, 2), end: Offset.zero),
       ],
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         border:
             ShadBorder.all(radius: radius, color: colorScheme.border, width: 0),
         color: colorScheme.popover,
@@ -252,7 +252,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       ],
       shadows: ShadShadows.md,
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         color: colorScheme.popover,
         shadows: ShadShadows.md,
         border: ShadBorder.all(
@@ -266,8 +266,8 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
   }
 
   @override
-  ShadDecoration decorationTheme() {
-    return ShadDecoration(
+  TurboDecoration decorationTheme() {
+    return TurboDecoration(
       secondaryBorder: ShadBorder.all(
         padding: const EdgeInsets.all(4),
         width: 0,
@@ -322,7 +322,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       minWidth: kDefaultSelectMinWidth,
       maxHeight: kDefaultSelectMaxHeight,
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         border: ShadBorder.all(
           radius: radius,
           color: colorScheme.input,
@@ -376,7 +376,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       uncheckedTrackColor: colorScheme.input,
       checkedTrackColor: colorScheme.primary,
       padding: const EdgeInsets.only(left: 8),
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         border: ShadBorder.all(radius: radius.add(radius / 2), width: 0),
         secondaryFocusedBorder:
             ShadBorder.all(radius: radius.add(radius / 2), width: 2),
@@ -391,7 +391,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       duration: 100.milliseconds,
       color: colorScheme.primary,
       padding: const EdgeInsets.only(left: 8),
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         border: ShadBorder.all(
           color: colorScheme.primary,
           radius: radius,
@@ -408,7 +408,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       placeholderStyle: effectiveTextTheme.muted,
       placeholderAlignment: Alignment.topLeft,
       inputPadding: EdgeInsets.zero,
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         border: ShadBorder.all(
           width: 1,
           color: colorScheme.border,
@@ -430,7 +430,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       duration: 100.milliseconds,
       color: colorScheme.primary,
       padding: const EdgeInsets.only(left: 8),
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         shape: BoxShape.circle,
         border: ShadBorder.all(
           color: colorScheme.primary,
@@ -501,7 +501,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
   ShadAlertTheme primaryAlertTheme() {
     return ShadAlertTheme(
       iconPadding: const EdgeInsets.only(right: 12),
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         border: ShadBorder.all(
           color: colorScheme.border,
           radius: radius,
@@ -525,7 +525,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
   ShadAlertTheme destructiveAlertTheme() {
     return ShadAlertTheme(
       iconPadding: const EdgeInsets.only(right: 12),
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         border: ShadBorder.all(
           color: colorScheme.destructive,
           radius: radius,
@@ -691,7 +691,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       dividerSize: 8,
       dividerColor: colorScheme.border,
       resetOnDoubleTap: true,
-      handleDecoration: ShadDecoration(
+      handleDecoration: TurboDecoration(
         color: colorScheme.border,
         border: ShadBorder.all(
           radius: const BorderRadius.all(Radius.circular(4)),
@@ -707,8 +707,8 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
   }
 
   @override
-  ShadHoverStrategies hoverStrategies() {
-    return const ShadHoverStrategies(
+  TurboHoverStrategies hoverStrategies() {
+    return const TurboHoverStrategies(
       hover: {
         ShadHoverStrategy.onTapDown,
         ShadHoverStrategy.onLongPressDown,
@@ -729,7 +729,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
     return ShadTabsTheme(
       dragStartBehavior: DragStartBehavior.start,
       padding: EdgeInsets.zero,
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         color: colorScheme.muted,
         border: ShadBorder.all(
           radius: radius,
@@ -737,7 +737,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
           color: colorScheme.ring,
         ),
       ),
-      tabDecoration: ShadDecoration(
+      tabDecoration: TurboDecoration(
         border: ShadBorder.all(
           radius: const BorderRadius.all(Radius.circular(4)),
           width: 0,
@@ -770,8 +770,8 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
         trailingPadding: const EdgeInsets.only(left: 8),
         showDelay: const Duration(milliseconds: 100),
         height: 32,
-        buttonVariant: ShadButtonVariant.ghost,
-        itemDecoration: const ShadDecoration(
+        buttonVariant: TurboButtonVariant.ghost,
+        itemDecoration: const TurboDecoration(
           secondaryBorder: ShadBorder.none,
           secondaryFocusedBorder: ShadBorder.none,
         ),
@@ -797,7 +797,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
         forwardNavigationButtonIconData: LucideIcons.chevronRight,
         navigationButtonPadding: EdgeInsets.zero,
         navigationButtonDisabledOpacity: .5,
-        decoration: ShadDecoration(
+        decoration: TurboDecoration(
           border: ShadBorder.all(
             radius: radius,
             padding: const EdgeInsets.all(12),
@@ -829,13 +829,13 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
               fontWeight: FontWeight.normal,
               color: colorScheme.foreground,
             ),
-        dayButtonOutsideMonthVariant: ShadButtonVariant.ghost,
+        dayButtonOutsideMonthVariant: TurboButtonVariant.ghost,
         dayButtonOutsideMonthTextStyle: textTheme().muted,
-        dayButtonVariant: ShadButtonVariant.ghost,
-        todayButtonVariant: ShadButtonVariant.secondary,
-        selectedDayButtonVariant: ShadButtonVariant.primary,
-        selectedDayButtonOusideMonthVariant: ShadButtonVariant.secondary,
-        insideRangeDayButtonVariant: ShadButtonVariant.secondary,
+        dayButtonVariant: TurboButtonVariant.ghost,
+        todayButtonVariant: TurboButtonVariant.secondary,
+        selectedDayButtonVariant: TurboButtonVariant.primary,
+        selectedDayButtonOusideMonthVariant: TurboButtonVariant.secondary,
+        insideRangeDayButtonVariant: TurboButtonVariant.secondary,
         weekdaysTextStyle: textTheme().muted.copyWith(fontSize: 12.8),
         weekdaysTextAlign: TextAlign.center,
         gridMainAxisSpacing: 8,
@@ -851,9 +851,9 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
   @override
   ShadDatePickerTheme datePickerTheme() {
     return const ShadDatePickerTheme(
-      calendarDecoration: ShadDecoration.none,
+      calendarDecoration: TurboDecoration.none,
       allowDeselection: true,
-      buttonVariant: ShadButtonVariant.outline,
+      buttonVariant: TurboButtonVariant.outline,
       width: 276,
       mainAxisAlignment: MainAxisAlignment.start,
       iconData: LucideIcons.calendar,
@@ -885,7 +885,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       fieldPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       periodHeight: 50,
       periodMinWidth: 65,
-      fieldDecoration: ShadDecoration(
+      fieldDecoration: TurboDecoration(
         border: ShadBorder.all(
           color: colorScheme.border,
           radius: radius,
@@ -915,7 +915,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       singleRadius: radius,
       middleRadius: BorderRadius.zero,
       padding: const EdgeInsets.symmetric(vertical: 4),
-      decoration: ShadDecoration(
+      decoration: TurboDecoration(
         disableSecondaryBorder: true,
         focusedBorder: ShadBorder.all(
           color: colorScheme.ring,

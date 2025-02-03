@@ -36,7 +36,7 @@ class ShadSwitchTheme {
 
   final Duration? duration;
 
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   final EdgeInsets? padding;
 
@@ -60,7 +60,7 @@ class ShadSwitchTheme {
       height: lerpDouble(a.height, b.height, t),
       margin: lerpDouble(a.margin, b.margin, t),
       duration: b.duration,
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       padding: EdgeInsets.lerp(a.padding, b.padding, t),
       orderPolicy: t < .5 ? a.orderPolicy : b.orderPolicy,
     );
@@ -75,7 +75,7 @@ class ShadSwitchTheme {
     double? height,
     double? margin,
     Duration? duration,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     EdgeInsets? padding,
     WidgetOrderPolicy? orderPolicy,
   }) {

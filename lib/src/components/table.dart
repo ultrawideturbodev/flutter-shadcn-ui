@@ -64,7 +64,7 @@ class ShadTableCell extends TableViewCell {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectiveAlignment =
         alignment ?? theme.tableTheme.cellAlignment ?? Alignment.centerLeft;
@@ -360,7 +360,7 @@ class _ShadTableState extends State<ShadTable> {
   }
 
   TableSpan _buildRowSpan(int index, int effectiveRowCount) {
-    final colorScheme = ShadTheme.of(context).colorScheme;
+    final colorScheme = TurboTheme.of(context).colorScheme;
     final gestureSettings = MediaQuery.maybeGestureSettingsOf(context);
     final isLast = index == effectiveRowCount - 1;
     final isFooter =
@@ -445,7 +445,7 @@ class _ShadTableState extends State<ShadTable> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectiveRowBuilder = widget.rowBuilder ??
         theme.tableTheme.rowBuilder ??

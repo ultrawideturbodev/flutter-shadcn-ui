@@ -119,7 +119,7 @@ class ShadTabs<T> extends StatefulWidget implements PreferredSizeWidget {
   /// {@template ShadTabs.decoration}
   /// The decoration of the tabs.
   /// {@endtemplate}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@template ShadTabs.tabBarConstraints}
   /// The constraints of the tab bar, defaults to `null`.
@@ -244,7 +244,7 @@ class ShadTabsState<T> extends State<ShadTabs<T>> with RestorationMixin {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final tabsTheme = theme.tabsTheme;
 
     final effectiveDragStartBehavior = widget.dragStartBehavior ??
@@ -254,7 +254,7 @@ class ShadTabsState<T> extends State<ShadTabs<T>> with RestorationMixin {
     final effectivePadding =
         widget.padding ?? tabsTheme.padding ?? EdgeInsets.zero;
 
-    final effectiveDecoration = ShadDecoration(
+    final effectiveDecoration = TurboDecoration(
       color: theme.colorScheme.muted,
       border: ShadBorder.all(radius: theme.radius, width: 0),
     ).mergeWith(tabsTheme.decoration).mergeWith(widget.decoration);
@@ -305,7 +305,7 @@ class ShadTabsState<T> extends State<ShadTabs<T>> with RestorationMixin {
           return Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              ShadDecorator(
+              TurboDecorator(
                 decoration: effectiveDecoration,
                 child: tabBar,
               ),
@@ -448,10 +448,10 @@ class ShadTab<T> extends StatefulWidget implements PreferredSizeWidget {
   final EdgeInsets? padding;
 
   /// The decoration of the tab.
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// The decoration of the selected tab, defaults to [ShadTab.decoration].
-  final ShadDecoration? selectedDecoration;
+  final TurboDecoration? selectedDecoration;
 
   /// The foreground color of the unselected tab, defaults to
   /// ShadThemeData.colorScheme.foreground.
@@ -480,7 +480,7 @@ class ShadTab<T> extends StatefulWidget implements PreferredSizeWidget {
   final VoidCallback? onLongPress;
 
   /// The size of the button.
-  final ShadButtonSize? size;
+  final TurboButtonSize? size;
 
   /// The cursor for the button.
   final MouseCursor? cursor;
@@ -508,7 +508,7 @@ class ShadTab<T> extends StatefulWidget implements PreferredSizeWidget {
   final TextDecoration? hoverTextDecoration;
 
   /// The states controller of the button.
-  final ShadStatesController? statesController;
+  final TurboStatesController? statesController;
 
   /// {@template ShadButton.mainAxisAlignment}
   /// The main axis alignment of the button.
@@ -524,7 +524,7 @@ class ShadTab<T> extends StatefulWidget implements PreferredSizeWidget {
   /// {@endtemplate}
   final CrossAxisAlignment? crossAxisAlignment;
 
-  final ShadHoverStrategies? hoverStrategies;
+  final TurboHoverStrategies? hoverStrategies;
   final ValueChanged<bool>? onHoverChange;
   final ValueChanged<TapDownDetails>? onTapDown;
   final ValueChanged<TapUpDetails>? onTapUp;
@@ -589,7 +589,7 @@ class _ShadTabState<T> extends State<ShadTab<T>> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final inherited =
         context.watch<ShadTabsState<dynamic>>() as ShadTabsState<T>;
 
@@ -659,7 +659,7 @@ class _ShadTabState<T> extends State<ShadTab<T>> {
         final isLastTab = inherited.orderedValues.last == widget.value;
 
         final defaultDecoration = switch (theme.disableSecondaryBorder) {
-          true => ShadDecoration(
+          true => TurboDecoration(
               border: ShadBorder.all(
                 radius: BorderRadius.circular(2),
                 width: 0,
@@ -671,7 +671,7 @@ class _ShadTabState<T> extends State<ShadTab<T>> {
                 color: theme.colorScheme.ring,
               ),
             ),
-          false => ShadDecoration(
+          false => TurboDecoration(
               border:
                   ShadBorder.all(radius: BorderRadius.circular(2), width: 0),
               secondaryBorder: ShadBorder.all(
@@ -702,7 +702,7 @@ class _ShadTabState<T> extends State<ShadTab<T>> {
             .mergeWith(tabsTheme.tabDecoration)
             .mergeWith(widget.decoration);
 
-        return ShadButton.secondary(
+        return TurboButton.secondary(
           icon: widget.icon,
           focusNode: focusNode,
           height: widget.preferredSize.height,

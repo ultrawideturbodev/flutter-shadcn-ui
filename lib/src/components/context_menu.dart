@@ -71,7 +71,7 @@ class ShadContextMenuRegion extends StatefulWidget {
   final List<BoxShadow>? shadows;
 
   /// {@macro ShadPopover.decoration}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@macro ShadPopover.filter}
   final ImageFilter? filter;
@@ -152,7 +152,7 @@ class _ShadContextMenuRegionState extends State<ShadContextMenuRegion> {
       shadows: widget.shadows,
       decoration: widget.decoration,
       filter: widget.filter,
-      child: ShadGestureDetector(
+      child: TurboGestureDetector(
         onTapDown: (_) => hide(),
         onSecondaryTapDown: (d) async {
           if (kIsWeb && !isContextMenuAlreadyDisabled) {
@@ -248,7 +248,7 @@ class ShadContextMenu extends StatefulWidget {
   final List<BoxShadow>? shadows;
 
   /// {@macro ShadPopover.decoration}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@macro ShadPopover.filter}
   final ImageFilter? filter;
@@ -293,7 +293,7 @@ class ShadContextMenuState extends State<ShadContextMenu> {
     // if the context menu has no items, just return the child
     if (widget.items.isEmpty) return widget.child;
 
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectiveConstraints = widget.constraints ??
         theme.contextMenuTheme.constraints ??
@@ -304,7 +304,7 @@ class ShadContextMenuState extends State<ShadContextMenu> {
         const EdgeInsets.symmetric(vertical: 4);
 
     final effectiveDecoration =
-        (theme.contextMenuTheme.decoration ?? const ShadDecoration())
+        (theme.contextMenuTheme.decoration ?? const TurboDecoration())
             .mergeWith(widget.decoration);
 
     final effectiveFilter = widget.filter ?? theme.contextMenuTheme.filter;
@@ -569,15 +569,15 @@ class ShadContextMenuItem extends StatefulWidget {
 
   /// {@template ShadContextMenuItem.buttonVariant}
   /// The variant of the button of the context menu item, defaults to
-  /// [ShadButtonVariant.ghost].
+  /// [TurboButtonVariant.ghost].
   /// {@endtemplate}
-  final ShadButtonVariant? buttonVariant;
+  final TurboButtonVariant? buttonVariant;
 
   /// {@template ShadContextMenuItem.decoration}
   /// The decoration of the context menu item, defaults to
   /// `ShadDecoration(secondaryBorder: ShadBorder.none)`.
   /// {@endtemplate}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@template ShadContextMenuItem.textStyle}
   /// The text style of the context menu item, defaults to
@@ -649,7 +649,7 @@ class _ShadContextMenuItemState extends State<ShadContextMenuItem> {
 
   @override
   Widget build(BuildContext contex) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final contextMenu = context.read<ShadContextMenuState>();
 
@@ -688,9 +688,9 @@ class _ShadContextMenuItemState extends State<ShadContextMenuItem> {
 
     final effectiveButtonVariant = widget.buttonVariant ??
         theme.contextMenuTheme.buttonVariant ??
-        ShadButtonVariant.ghost;
+        TurboButtonVariant.ghost;
 
-    final effectiveDecoration = const ShadDecoration(
+    final effectiveDecoration = const TurboDecoration(
       secondaryBorder: ShadBorder.none,
       secondaryFocusedBorder: ShadBorder.none,
     )
@@ -739,7 +739,7 @@ class _ShadContextMenuItemState extends State<ShadContextMenuItem> {
           items: widget.items,
           child: Padding(
             padding: effectivePadding,
-            child: ShadButton.raw(
+            child: TurboButton.raw(
               height: effectiveHeight,
               enabled: widget.enabled,
               variant: effectiveButtonVariant,

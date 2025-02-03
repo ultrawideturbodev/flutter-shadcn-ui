@@ -1,21 +1,21 @@
 import 'package:flutter/widgets.dart';
 import 'package:shadcn_ui/src/theme/data.dart';
 
-class ShadTheme extends StatelessWidget {
-  const ShadTheme({
+class TurboTheme extends StatelessWidget {
+  const TurboTheme({
     super.key,
     required this.data,
     required this.child,
   });
 
-  final ShadThemeData data;
+  final TurboThemeData data;
   final Widget child;
 
-  static ShadThemeData of(BuildContext context, {bool listen = true}) {
+  static TurboThemeData of(BuildContext context, {bool listen = true}) {
     return maybeOf(context, listen: listen)!;
   }
 
-  static ShadThemeData? maybeOf(
+  static TurboThemeData? maybeOf(
     BuildContext context, {
     bool listen = true,
   }) {
@@ -48,11 +48,11 @@ class ShadInheritedTheme extends InheritedTheme {
     required super.child,
   });
 
-  final ShadTheme theme;
+  final TurboTheme theme;
 
   @override
   Widget wrap(BuildContext context, Widget child) {
-    return ShadTheme(data: theme.data, child: child);
+    return TurboTheme(data: theme.data, child: child);
   }
 
   @override
@@ -60,14 +60,14 @@ class ShadInheritedTheme extends InheritedTheme {
       theme.data != oldWidget.theme.data;
 }
 
-/// An interpolation between two [ShadThemeData]s.
+/// An interpolation between two [TurboThemeData]s.
 ///
 /// This class specializes the interpolation of [Tween<ShadThemeData>] to call
-/// the [ShadThemeData.lerp] method.
+/// the [TurboThemeData.lerp] method.
 ///
 /// See [Tween] for a discussion on how to use interpolation objects.
-class ShadThemeDataTween extends Tween<ShadThemeData> {
-  /// Creates a [ShadThemeData] tween.
+class ShadThemeDataTween extends Tween<TurboThemeData> {
+  /// Creates a [TurboThemeData] tween.
   ///
   /// The [begin] and [end] properties must be non-null before the tween is
   /// first used, but the arguments can be null if the values are going to be
@@ -75,10 +75,10 @@ class ShadThemeDataTween extends Tween<ShadThemeData> {
   ShadThemeDataTween({super.begin, super.end});
 
   @override
-  ShadThemeData lerp(double t) => ShadThemeData.lerp(begin!, end!, t);
+  TurboThemeData lerp(double t) => TurboThemeData.lerp(begin!, end!, t);
 }
 
-/// Animated version of [ShadTheme] which automatically transitions the colors
+/// Animated version of [TurboTheme] which automatically transitions the colors
 /// etc, over a given duration whenever the given theme changes.
 class ShadAnimatedTheme extends ImplicitlyAnimatedWidget {
   /// Creates an animated theme.
@@ -94,7 +94,7 @@ class ShadAnimatedTheme extends ImplicitlyAnimatedWidget {
   });
 
   /// Specifies the color and typography values for descendant widgets.
-  final ShadThemeData data;
+  final TurboThemeData data;
 
   /// The widget below this widget in the tree.
   final Widget child;
@@ -113,13 +113,13 @@ class _ShadAnimatedThemeState
     _data = visitor(
       _data,
       widget.data,
-      (dynamic value) => ShadThemeDataTween(begin: value as ShadThemeData),
+      (dynamic value) => ShadThemeDataTween(begin: value as TurboThemeData),
     )! as ShadThemeDataTween;
   }
 
   @override
   Widget build(BuildContext context) {
-    return ShadTheme(
+    return TurboTheme(
       data: _data!.evaluate(animation),
       child: widget.child,
     );

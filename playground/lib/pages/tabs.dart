@@ -22,7 +22,7 @@ class TabsPage extends StatelessWidget {
                   title: const Text('Account'),
                   description: const Text(
                       "Make changes to your account here. Click save when you're done."),
-                  footer: const ShadButton(child: Text('Save changes')),
+                  footer: const TurboButton(child: Text('Save changes')),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -48,7 +48,7 @@ class TabsPage extends StatelessWidget {
                   title: const Text('Password'),
                   description: const Text(
                       "Change your password here. After saving, you'll be logged out."),
-                  footer: const ShadButton(child: Text('Save password')),
+                  footer: const TurboButton(child: Text('Save password')),
                   child: Column(
                     children: [
                       const SizedBox(height: 16),

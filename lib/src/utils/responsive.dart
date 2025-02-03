@@ -116,7 +116,7 @@ class ShadResponsiveBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
-    final breakpoints = ShadTheme.of(context).breakpoints;
+    final breakpoints = TurboTheme.of(context).breakpoints;
     final breakpoint = breakpoints.fromWidth(width);
     return builder(context, breakpoint);
   }

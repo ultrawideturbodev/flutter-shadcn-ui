@@ -33,7 +33,7 @@ class ShadResizableTheme {
   final IconData? handleIconData;
   final double? dividerSize;
   final bool? resetOnDoubleTap;
-  final ShadDecoration? handleDecoration;
+  final TurboDecoration? handleDecoration;
   final EdgeInsets? handlePadding;
   final double? handleSize;
   final double? dividerThickness;
@@ -57,7 +57,7 @@ class ShadResizableTheme {
       dividerSize: lerpDouble(a.dividerSize, b.dividerSize, t),
       resetOnDoubleTap: t < 0.5 ? a.resetOnDoubleTap : b.resetOnDoubleTap,
       handleDecoration:
-          ShadDecoration.lerp(a.handleDecoration, b.handleDecoration, t),
+          TurboDecoration.lerp(a.handleDecoration, b.handleDecoration, t),
       handlePadding: EdgeInsets.lerp(a.handlePadding, b.handlePadding, t),
       handleSize: lerpDouble(a.handleSize, b.handleSize, t),
       dividerColor: Color.lerp(a.dividerColor, b.dividerColor, t),
@@ -98,7 +98,7 @@ class ShadResizableTheme {
     IconData? handleIconData,
     double? dividerSize,
     bool? resetOnDoubleTap,
-    ShadDecoration? handleDecoration,
+    TurboDecoration? handleDecoration,
     EdgeInsets? handlePadding,
     double? handleSize,
     Color? dividerColor,

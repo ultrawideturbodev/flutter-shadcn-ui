@@ -22,21 +22,21 @@ class ShadAvatar extends StatelessWidget {
   final String? package;
   final BoxFit? fit;
 
-  Size effectiveSize(ShadThemeData theme) {
+  Size effectiveSize(TurboThemeData theme) {
     return size ?? theme.avatarTheme.size ?? const Size.square(40);
   }
 
-  ShapeBorder effectiveShape(ShadThemeData theme) {
+  ShapeBorder effectiveShape(TurboThemeData theme) {
     return shape ?? theme.avatarTheme.shape ?? const CircleBorder();
   }
 
-  Color? effectiveBackgroundColor(ShadThemeData theme) {
+  Color? effectiveBackgroundColor(TurboThemeData theme) {
     return backgroundColor ??
         theme.avatarTheme.backgroundColor ??
         theme.colorScheme.muted;
   }
 
-  BoxFit? effectiveFit(ShadThemeData theme) {
+  BoxFit? effectiveFit(TurboThemeData theme) {
     return fit ?? theme.avatarTheme.fit;
   }
 
@@ -51,8 +51,8 @@ class ShadAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    assert(debugCheckHasShadTheme(context));
-    final theme = ShadTheme.of(context);
+    assert(debugCheckHasTurboTheme(context));
+    final theme = TurboTheme.of(context);
     final size = effectiveSize(theme);
 
     return Container(

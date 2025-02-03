@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:shadcn_ui/src/theme/theme.dart';
 
-bool debugCheckHasShadTheme(BuildContext context) {
+bool debugCheckHasTurboTheme(BuildContext context) {
   assert(() {
     if (context.widget is! ShadInheritedTheme &&
         context.getElementForInheritedWidgetOfExactType<ShadInheritedTheme>() ==

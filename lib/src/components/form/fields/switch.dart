@@ -20,7 +20,7 @@ class ShadSwitchFormField extends ShadFormBuilderField<bool> {
     super.autovalidateMode,
     super.restorationId,
     required bool initialValue,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     super.focusNode,
     String? Function(bool)? validator,
     Color? thumbColor,
@@ -47,8 +47,8 @@ class ShadSwitchFormField extends ShadFormBuilderField<bool> {
                   return validator(v ?? false);
                 },
           decorationBuilder: (context) =>
-              (ShadTheme.of(context).switchTheme.decoration ??
-                      const ShadDecoration())
+              (TurboTheme.of(context).switchTheme.decoration ??
+                      const TurboDecoration())
                   .mergeWith(decoration),
           builder: (field) {
             final state = field as _ShadFormBuilderSwitchState;

@@ -495,12 +495,12 @@ class ShadTimePicker extends StatefulWidget {
   /// ),
   /// ```
   /// {@endtemplate}
-  final ShadDecoration? fieldDecoration;
+  final TurboDecoration? fieldDecoration;
 
   /// {@template ShadTimePicker.periodDecoration}
   /// The decoration of the field, defaults to `null`.
   /// {@endtemplate}
-  final ShadDecoration? periodDecoration;
+  final TurboDecoration? periodDecoration;
 
   /// {@template ShadTimePicker.controller}
   /// The controller of the time picker, defaults to `null`.
@@ -589,7 +589,7 @@ class _ShadTimePickerState extends State<ShadTimePicker> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final effectiveAxis =
         widget.axis ?? theme.timePickerTheme.axis ?? Axis.horizontal;
     final effectiveSpacing =
@@ -661,7 +661,7 @@ class _ShadTimePickerState extends State<ShadTimePicker> {
         .merge(theme.timePickerTheme.labelStyle)
         .merge(widget.labelStyle);
 
-    final effectiveFieldDecoration = ShadDecoration(
+    final effectiveFieldDecoration = TurboDecoration(
       border: ShadBorder.all(
         color: theme.colorScheme.border,
         radius: theme.radius,
@@ -671,7 +671,7 @@ class _ShadTimePickerState extends State<ShadTimePicker> {
         .mergeWith(widget.fieldDecoration);
 
     final effectivePeriodDecoration =
-        (theme.timePickerTheme.periodDecoration ?? const ShadDecoration())
+        (theme.timePickerTheme.periodDecoration ?? const TurboDecoration())
             .mergeWith(widget.periodDecoration);
 
     return Wrap(
@@ -817,7 +817,7 @@ class ShadTimePickerField extends StatefulWidget {
   final FocusNode? focusNode;
   final double? width;
   final EdgeInsets? padding;
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
   final bool enabled;
 
   @override
@@ -845,7 +845,7 @@ class _ShadTimePickerFieldState extends State<ShadTimePickerField> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
     final effectiveGap = widget.gap ?? 2;
 
     final defaultStyle = theme.textTheme.muted.copyWith(
@@ -871,7 +871,7 @@ class _ShadTimePickerFieldState extends State<ShadTimePickerField> {
     final effectivePadding = widget.padding ??
         const EdgeInsets.symmetric(horizontal: 12, vertical: 8);
 
-    final effectiveDecoration = ShadDecoration(
+    final effectiveDecoration = TurboDecoration(
       border: ShadBorder.all(
         color: theme.colorScheme.border,
         radius: theme.radius,
@@ -954,7 +954,7 @@ class ShadTimePickerTextEditingController extends TextEditingController {
       !value.composing.isValid || !withComposing || value.isComposingRangeValid,
     );
 
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final defaultPlaceholderStyle = theme.textTheme.muted.copyWith(
       fontSize: 16,

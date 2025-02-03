@@ -4,8 +4,8 @@ import 'package:shadcn_ui/src/theme/theme.dart';
 import 'package:shadcn_ui/src/utils/border.dart';
 
 @immutable
-class ShadDecoration {
-  const ShadDecoration({
+class TurboDecoration {
+  const TurboDecoration({
     this.merge = true,
     this.border,
     this.focusedBorder,
@@ -32,7 +32,7 @@ class ShadDecoration {
     this.disableSecondaryBorder,
   });
 
-  static const ShadDecoration none = ShadDecoration(
+  static const TurboDecoration none = TurboDecoration(
     merge: false,
     border: ShadBorder.none,
     focusedBorder: ShadBorder.none,
@@ -75,13 +75,13 @@ class ShadDecoration {
   /// provided, defaults to true.
   final bool? fallbackToLabelStyle;
 
-  static ShadDecoration? lerp(
-    ShadDecoration? a,
-    ShadDecoration? b,
+  static TurboDecoration? lerp(
+    TurboDecoration? a,
+    TurboDecoration? b,
     double t,
   ) {
     if (a == null && b == null) return null;
-    return ShadDecoration(
+    return TurboDecoration(
       border: ShadBorder.lerp(a?.border, b?.border, t),
       focusedBorder: ShadBorder.lerp(a?.focusedBorder, b?.focusedBorder, t),
       errorBorder: ShadBorder.lerp(a?.errorBorder, b?.errorBorder, t),
@@ -120,7 +120,7 @@ class ShadDecoration {
     );
   }
 
-  ShadDecoration mergeWith(ShadDecoration? other) {
+  TurboDecoration mergeWith(TurboDecoration? other) {
     if (other == null) return this;
     if (!other.merge) return other;
     return copyWith(
@@ -158,7 +158,7 @@ class ShadDecoration {
     );
   }
 
-  ShadDecoration copyWith({
+  TurboDecoration copyWith({
     ShadBorder? border,
     ShadBorder? focusedBorder,
     ShadBorder? errorBorder,
@@ -183,7 +183,7 @@ class ShadDecoration {
     bool? fallbackToLabelStyle,
     bool? disableSecondaryBorder,
   }) {
-    return ShadDecoration(
+    return TurboDecoration(
       border: border ?? this.border,
       focusedBorder: focusedBorder ?? this.focusedBorder,
       errorBorder: errorBorder ?? this.errorBorder,
@@ -216,7 +216,7 @@ class ShadDecoration {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is ShadDecoration &&
+    return other is TurboDecoration &&
         other.border == border &&
         other.focusedBorder == focusedBorder &&
         other.errorBorder == errorBorder &&
@@ -274,8 +274,8 @@ class ShadDecoration {
   }
 }
 
-class ShadDecorator extends StatelessWidget {
-  const ShadDecorator({
+class TurboDecorator extends StatelessWidget {
+  const TurboDecorator({
     super.key,
     this.child,
     this.decoration,
@@ -286,14 +286,14 @@ class ShadDecorator extends StatelessWidget {
   final Widget? child;
 
   /// The decoration to apply to the child.
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// Whether the child has focus, defaults to false.
   final bool focused;
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectiveDecoration = theme.decoration.mergeWith(decoration);
 

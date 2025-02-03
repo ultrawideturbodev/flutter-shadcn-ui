@@ -38,27 +38,27 @@ import 'package:shadcn_ui/src/utils/gesture_detector.dart';
 import 'package:shadcn_ui/src/utils/responsive.dart';
 
 @immutable
-class ShadThemeData extends ShadBaseTheme {
-  factory ShadThemeData({
+class TurboThemeData extends ShadBaseTheme {
+  factory TurboThemeData({
     required ShadColorScheme colorScheme,
     required Brightness brightness,
     Iterable<ThemeExtension<dynamic>>? extensions,
-    ShadButtonTheme? primaryButtonTheme,
-    ShadButtonTheme? secondaryButtonTheme,
-    ShadButtonTheme? destructiveButtonTheme,
-    ShadButtonTheme? outlineButtonTheme,
-    ShadButtonTheme? ghostButtonTheme,
-    ShadButtonTheme? linkButtonTheme,
+    TurboButtonTheme? primaryButtonTheme,
+    TurboButtonTheme? secondaryButtonTheme,
+    TurboButtonTheme? destructiveButtonTheme,
+    TurboButtonTheme? outlineButtonTheme,
+    TurboButtonTheme? ghostButtonTheme,
+    TurboButtonTheme? linkButtonTheme,
     ShadBadgeTheme? primaryBadgeTheme,
     ShadBadgeTheme? secondaryBadgeTheme,
     ShadBadgeTheme? destructiveBadgeTheme,
     ShadBadgeTheme? outlineBadgeTheme,
     BorderRadius? radius,
     ShadAvatarTheme? avatarTheme,
-    ShadButtonSizesTheme? buttonSizesTheme,
+    TurboButtonSizesTheme? buttonSizesTheme,
     ShadTooltipTheme? tooltipTheme,
     ShadPopoverTheme? popoverTheme,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     ShadTextTheme? textTheme,
     double? disabledOpacity,
     ShadSelectTheme? selectTheme,
@@ -81,7 +81,7 @@ class ShadThemeData extends ShadBaseTheme {
     ShadAccordionTheme? accordionTheme,
     ShadTableTheme? tableTheme,
     ShadResizableTheme? resizableTheme,
-    ShadHoverStrategies? hoverStrategies,
+    TurboHoverStrategies? hoverStrategies,
     bool? disableSecondaryBorder,
     ShadTabsTheme? tabsTheme,
     ShadThemeVariant? variant,
@@ -155,7 +155,7 @@ class ShadThemeData extends ShadBaseTheme {
             ),
         };
 
-    return ShadThemeData._internal(
+    return TurboThemeData._internal(
       colorScheme: colorScheme,
       brightness: brightness,
       extensions: extensions,
@@ -235,7 +235,7 @@ class ShadThemeData extends ShadBaseTheme {
     );
   }
 
-  const ShadThemeData._internal({
+  const TurboThemeData._internal({
     required super.colorScheme,
     required super.brightness,
     required super.extensions,
@@ -287,31 +287,31 @@ class ShadThemeData extends ShadBaseTheme {
     required super.inputOTPTheme,
   });
 
-  static ShadThemeData lerp(ShadThemeData a, ShadThemeData b, double t) {
+  static TurboThemeData lerp(TurboThemeData a, TurboThemeData b, double t) {
     if (identical(a, b)) {
       return a;
     }
-    return ShadThemeData(
+    return TurboThemeData(
       colorScheme: ShadColorScheme.lerp(a.colorScheme, b.colorScheme, t),
       brightness: b.brightness,
       primaryButtonTheme:
-          ShadButtonTheme.lerp(a.primaryButtonTheme, b.primaryButtonTheme, t),
-      secondaryButtonTheme: ShadButtonTheme.lerp(
+          TurboButtonTheme.lerp(a.primaryButtonTheme, b.primaryButtonTheme, t),
+      secondaryButtonTheme: TurboButtonTheme.lerp(
         a.secondaryButtonTheme,
         b.secondaryButtonTheme,
         t,
       ),
-      destructiveButtonTheme: ShadButtonTheme.lerp(
+      destructiveButtonTheme: TurboButtonTheme.lerp(
         a.destructiveButtonTheme,
         b.destructiveButtonTheme,
         t,
       ),
       outlineButtonTheme:
-          ShadButtonTheme.lerp(a.outlineButtonTheme, b.outlineButtonTheme, t),
+          TurboButtonTheme.lerp(a.outlineButtonTheme, b.outlineButtonTheme, t),
       ghostButtonTheme:
-          ShadButtonTheme.lerp(a.ghostButtonTheme, b.ghostButtonTheme, t),
+          TurboButtonTheme.lerp(a.ghostButtonTheme, b.ghostButtonTheme, t),
       linkButtonTheme:
-          ShadButtonTheme.lerp(a.linkButtonTheme, b.linkButtonTheme, t),
+          TurboButtonTheme.lerp(a.linkButtonTheme, b.linkButtonTheme, t),
       primaryBadgeTheme:
           ShadBadgeTheme.lerp(a.primaryBadgeTheme, b.primaryBadgeTheme, t),
       secondaryBadgeTheme: ShadBadgeTheme.lerp(
@@ -328,14 +328,14 @@ class ShadThemeData extends ShadBaseTheme {
           ShadBadgeTheme.lerp(a.outlineBadgeTheme, b.outlineBadgeTheme, t),
       radius: BorderRadius.lerp(a.radius, b.radius, t),
       avatarTheme: ShadAvatarTheme.lerp(a.avatarTheme, b.avatarTheme, t),
-      buttonSizesTheme: ShadButtonSizesTheme.lerp(
+      buttonSizesTheme: TurboButtonSizesTheme.lerp(
         a.buttonSizesTheme,
         b.buttonSizesTheme,
         t,
       ),
       tooltipTheme: ShadTooltipTheme.lerp(a.tooltipTheme, b.tooltipTheme, t),
       popoverTheme: ShadPopoverTheme.lerp(a.popoverTheme, b.popoverTheme, t),
-      decoration: ShadDecoration.lerp(a.decoration, b.decoration, t),
+      decoration: TurboDecoration.lerp(a.decoration, b.decoration, t),
       textTheme: ShadTextTheme.lerp(a.textTheme, b.textTheme, t),
       disabledOpacity: lerpDouble(a.disabledOpacity, b.disabledOpacity, t),
       selectTheme: ShadSelectTheme.lerp(a.selectTheme, b.selectTheme, t),
@@ -499,14 +499,14 @@ class ShadThemeData extends ShadBaseTheme {
         inputOTPTheme.hashCode;
   }
 
-  ShadThemeData copyWith({
+  TurboThemeData copyWith({
     ShadColorScheme? colorScheme,
-    ShadButtonTheme? primaryButtonTheme,
-    ShadButtonTheme? secondaryButtonTheme,
-    ShadButtonTheme? destructiveButtonTheme,
-    ShadButtonTheme? outlineButtonTheme,
-    ShadButtonTheme? ghostButtonTheme,
-    ShadButtonTheme? linkButtonTheme,
+    TurboButtonTheme? primaryButtonTheme,
+    TurboButtonTheme? secondaryButtonTheme,
+    TurboButtonTheme? destructiveButtonTheme,
+    TurboButtonTheme? outlineButtonTheme,
+    TurboButtonTheme? ghostButtonTheme,
+    TurboButtonTheme? linkButtonTheme,
     ShadBadgeTheme? primaryBadgeTheme,
     ShadBadgeTheme? secondaryBadgeTheme,
     ShadBadgeTheme? destructiveBadgeTheme,
@@ -515,10 +515,10 @@ class ShadThemeData extends ShadBaseTheme {
     Iterable<ThemeExtension<dynamic>>? extensions,
     BorderRadius? radius,
     ShadAvatarTheme? avatarTheme,
-    ShadButtonSizesTheme? buttonSizesTheme,
+    TurboButtonSizesTheme? buttonSizesTheme,
     ShadTooltipTheme? tooltipTheme,
     ShadPopoverTheme? popoverTheme,
-    ShadDecoration? decoration,
+    TurboDecoration? decoration,
     ShadTextTheme? textTheme,
     double? disabledOpacity,
     ShadSelectTheme? selectTheme,
@@ -541,7 +541,7 @@ class ShadThemeData extends ShadBaseTheme {
     ShadAccordionTheme? accordionTheme,
     ShadTableTheme? tableTheme,
     ShadResizableTheme? resizableTheme,
-    ShadHoverStrategies? hoverStrategies,
+    TurboHoverStrategies? hoverStrategies,
     bool? disableSecondaryBorder,
     ShadTabsTheme? tabsTheme,
     ShadContextMenuTheme? contextMenuTheme,
@@ -550,7 +550,7 @@ class ShadThemeData extends ShadBaseTheme {
     ShadTimePickerTheme? timePickerTheme,
     ShadInputOTPTheme? inputOTPTheme,
   }) {
-    return ShadThemeData(
+    return TurboThemeData(
       colorScheme: colorScheme ?? this.colorScheme,
       extensions: extensions ?? this.extensions,
       brightness: brightness ?? this.brightness,

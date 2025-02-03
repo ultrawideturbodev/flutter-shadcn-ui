@@ -155,7 +155,7 @@ class ShadDatePickerTheme {
   final double? navigationButtonDisabledOpacity;
 
   /// {@macro ShadCalendar.decoration}
-  final ShadDecoration? calendarDecoration;
+  final TurboDecoration? calendarDecoration;
 
   /// {@macro ShadCalendar.spacingBetweenMonths}
   final double? spacingBetweenMonths;
@@ -209,7 +209,7 @@ class ShadDatePickerTheme {
   final EdgeInsets? dayButtonPadding;
 
   /// {@macro ShadCalendar.dayButtonDecoration}
-  final ShadDecoration? dayButtonDecoration;
+  final TurboDecoration? dayButtonDecoration;
 
   /// {@macro ShadCalendar.selectedDayButtonTextStyle}
   final TextStyle? selectedDayButtonTextStyle;
@@ -221,16 +221,16 @@ class ShadDatePickerTheme {
   final TextStyle? dayButtonTextStyle;
 
   /// {@macro ShadCalendar.dayButtonVariant}
-  final ShadButtonVariant? dayButtonVariant;
+  final TurboButtonVariant? dayButtonVariant;
 
   /// {@macro ShadCalendar.selectedDayButtonVariant}
-  final ShadButtonVariant? selectedDayButtonVariant;
+  final TurboButtonVariant? selectedDayButtonVariant;
 
   /// {@macro ShadCalendar.insideRangeDayButtonVariant}
-  final ShadButtonVariant? insideRangeDayButtonVariant;
+  final TurboButtonVariant? insideRangeDayButtonVariant;
 
   /// {@macro ShadCalendar.todayButtonVariant}
-  final ShadButtonVariant? todayButtonVariant;
+  final TurboButtonVariant? todayButtonVariant;
 
   /// {@macro ShadCalendar.gridMainAxisSpacing}
   final double? gridMainAxisSpacing;
@@ -242,10 +242,10 @@ class ShadDatePickerTheme {
   final TextStyle? dayButtonOutsideMonthTextStyle;
 
   /// {@macro ShadCalendar.dayButtonOutsideMonthVariant}
-  final ShadButtonVariant? dayButtonOutsideMonthVariant;
+  final TurboButtonVariant? dayButtonOutsideMonthVariant;
 
   /// {@macro ShadCalendar.selectedDayButtonOusideMonthVariant}
-  final ShadButtonVariant? selectedDayButtonOusideMonthVariant;
+  final TurboButtonVariant? selectedDayButtonOusideMonthVariant;
 
   /// {@macro ShadCalendar.captionLayout}
   final ShadCalendarCaptionLayout? captionLayout;
@@ -294,7 +294,7 @@ class ShadDatePickerTheme {
   final EdgeInsetsGeometry? popoverPadding;
 
   /// {@macro popover.decoration}
-  final ShadDecoration? popoverDecoration;
+  final TurboDecoration? popoverDecoration;
 
   /// {@macro popover.anchor}
   final ShadAnchorBase? anchor;
@@ -310,13 +310,13 @@ class ShadDatePickerTheme {
   final MouseCursor? cursor;
 
   /// {@macro ShadButton.size}
-  final ShadButtonSize? size;
+  final TurboButtonSize? size;
 
   /// {@macro ShadButton.sizesTheme}
-  final ShadButtonSizesTheme? sizesTheme;
+  final TurboButtonSizesTheme? sizesTheme;
 
   /// {@macro ShadButton.variant}
-  final ShadButtonVariant? buttonVariant;
+  final TurboButtonVariant? buttonVariant;
 
   /// {@macro ShadButton.bakcgroundColor}
   final Color? backgroundColor;
@@ -352,7 +352,7 @@ class ShadDatePickerTheme {
   final TextDecoration? hoverTextDecoration;
 
   /// {@macro ShadButton.decoration}
-  final ShadDecoration? buttonDecoration;
+  final TurboDecoration? buttonDecoration;
 
   /// {@macro ShadButton.width}
   final double? width;
@@ -364,7 +364,7 @@ class ShadDatePickerTheme {
   final Duration? longPressDuration;
 
   /// {@macro ShadButton.hoverStrategies}
-  final ShadHoverStrategies? hoverStrategies;
+  final TurboHoverStrategies? hoverStrategies;
 
   /// {@macro ShadButton.mainAxisAlignment}
   final MainAxisAlignment? mainAxisAlignment;
@@ -434,7 +434,7 @@ class ShadDatePickerTheme {
         t,
       ),
       calendarDecoration:
-          ShadDecoration.lerp(a.calendarDecoration, b.calendarDecoration, t),
+          TurboDecoration.lerp(a.calendarDecoration, b.calendarDecoration, t),
       spacingBetweenMonths:
           lerpDouble(a.spacingBetweenMonths, b.spacingBetweenMonths, t),
       runSpacingBetweenMonths: lerpDouble(
@@ -490,7 +490,7 @@ class ShadDatePickerTheme {
         b.dayButtonPadding,
         t,
       ),
-      dayButtonDecoration: ShadDecoration.lerp(
+      dayButtonDecoration: TurboDecoration.lerp(
         a.dayButtonDecoration,
         b.dayButtonDecoration,
         t,
@@ -554,10 +554,10 @@ class ShadDatePickerTheme {
       popoverPadding:
           EdgeInsetsGeometry.lerp(a.popoverPadding, b.popoverPadding, t),
       popoverDecoration:
-          ShadDecoration.lerp(a.calendarDecoration, b.calendarDecoration, t),
+          TurboDecoration.lerp(a.calendarDecoration, b.calendarDecoration, t),
       anchor: t < 0.5 ? a.anchor : b.anchor,
       filter: t < 0.5 ? a.filter : b.filter,
-      sizesTheme: ShadButtonSizesTheme.lerp(
+      sizesTheme: TurboButtonSizesTheme.lerp(
         a.sizesTheme,
         b.sizesTheme,
         t,
@@ -580,7 +580,7 @@ class ShadDatePickerTheme {
       cursor: t < 0.5 ? a.cursor : b.cursor,
       size: t < 0.5 ? a.size : b.size,
       buttonDecoration:
-          ShadDecoration.lerp(a.calendarDecoration, b.calendarDecoration, t),
+          TurboDecoration.lerp(a.calendarDecoration, b.calendarDecoration, t),
       width: lerpDouble(a.width, b.width, t),
       height: lerpDouble(a.height, b.height, t),
       mainAxisAlignment: t < 0.5 ? a.mainAxisAlignment : b.mainAxisAlignment,
@@ -926,7 +926,7 @@ class ShadDatePickerTheme {
     IconData? forwardNavigationButtonIconData,
     EdgeInsets? navigationButtonPadding,
     double? navigationButtonDisabledOpacity,
-    ShadDecoration? calendarDecoration,
+    TurboDecoration? calendarDecoration,
     double? spacingBetweenMonths,
     double? runSpacingBetweenMonths,
     BoxConstraints? monthConstraints,
@@ -944,19 +944,19 @@ class ShadDatePickerTheme {
     double? dayButtonSize,
     double? dayButtonOutsideMonthOpacity,
     EdgeInsets? dayButtonPadding,
-    ShadDecoration? dayButtonDecoration,
+    TurboDecoration? dayButtonDecoration,
     TextStyle? selectedDayButtonTextStyle,
     TextStyle? insideRangeDayButtonTextStyle,
     TextStyle? dayButtonTextStyle,
-    ShadButtonVariant? dayButtonVariant,
-    ShadButtonVariant? selectedDayButtonVariant,
-    ShadButtonVariant? insideRangeDayButtonVariant,
-    ShadButtonVariant? todayButtonVariant,
+    TurboButtonVariant? dayButtonVariant,
+    TurboButtonVariant? selectedDayButtonVariant,
+    TurboButtonVariant? insideRangeDayButtonVariant,
+    TurboButtonVariant? todayButtonVariant,
     double? gridMainAxisSpacing,
     double? gridCrossAxisSpacing,
     TextStyle? dayButtonOutsideMonthTextStyle,
-    ShadButtonVariant? dayButtonOutsideMonthVariant,
-    ShadButtonVariant? selectedDayButtonOusideMonthVariant,
+    TurboButtonVariant? dayButtonOutsideMonthVariant,
+    TurboButtonVariant? selectedDayButtonOusideMonthVariant,
     ShadCalendarCaptionLayout? captionLayout,
     bool? hideWeekdayNames,
     bool? showOutsideDays,
@@ -973,13 +973,13 @@ class ShadDatePickerTheme {
     List<Effect<dynamic>>? effects,
     List<BoxShadow>? shadows,
     EdgeInsetsGeometry? popoverPadding,
-    ShadDecoration? popoverDecoration,
+    TurboDecoration? popoverDecoration,
     ShadAnchorBase? anchor,
     ImageFilter? filter,
     MouseCursor? cursor,
     MouseCursor? disabledCursor,
-    ShadButtonSize? size,
-    ShadButtonSizesTheme? sizesTheme,
+    TurboButtonSize? size,
+    TurboButtonSizesTheme? sizesTheme,
     Color? backgroundColor,
     Color? hoverBackgroundColor,
     Color? foregroundColor,
@@ -990,18 +990,18 @@ class ShadDatePickerTheme {
     Gradient? gradient,
     TextDecoration? textDecoration,
     TextDecoration? hoverTextDecoration,
-    ShadDecoration? buttonDecoration,
+    TurboDecoration? buttonDecoration,
     double? width,
     double? height,
     MainAxisAlignment? mainAxisAlignment,
     CrossAxisAlignment? crossAxisAlignment,
     Duration? longPressDuration,
-    ShadHoverStrategies? hoverStrategies,
+    TurboHoverStrategies? hoverStrategies,
     TextDirection? textDirection,
     double? gap,
     String Function(DateTime date)? formatDate,
     String Function(ShadDateTimeRange range)? formatDateRange,
-    ShadButtonVariant? buttonVariant,
+    TurboButtonVariant? buttonVariant,
     EdgeInsetsGeometry? buttonPadding,
     IconData? iconData,
     WidgetOrderPolicy? orderPolicy,

@@ -89,22 +89,22 @@ abstract class ShadBaseTheme {
   final ShadColorScheme colorScheme;
   final Brightness brightness;
   final Iterable<ThemeExtension<dynamic>>? extensions;
-  final ShadButtonTheme primaryButtonTheme;
-  final ShadButtonTheme secondaryButtonTheme;
-  final ShadButtonTheme destructiveButtonTheme;
-  final ShadButtonTheme outlineButtonTheme;
-  final ShadButtonTheme ghostButtonTheme;
-  final ShadButtonTheme linkButtonTheme;
+  final TurboButtonTheme primaryButtonTheme;
+  final TurboButtonTheme secondaryButtonTheme;
+  final TurboButtonTheme destructiveButtonTheme;
+  final TurboButtonTheme outlineButtonTheme;
+  final TurboButtonTheme ghostButtonTheme;
+  final TurboButtonTheme linkButtonTheme;
   final ShadBadgeTheme primaryBadgeTheme;
   final ShadBadgeTheme secondaryBadgeTheme;
   final ShadBadgeTheme destructiveBadgeTheme;
   final ShadBadgeTheme outlineBadgeTheme;
   final BorderRadius radius;
   final ShadAvatarTheme avatarTheme;
-  final ShadButtonSizesTheme buttonSizesTheme;
+  final TurboButtonSizesTheme buttonSizesTheme;
   final ShadTooltipTheme tooltipTheme;
   final ShadPopoverTheme popoverTheme;
-  final ShadDecoration decoration;
+  final TurboDecoration decoration;
   final ShadTextTheme textTheme;
   final double disabledOpacity;
   final ShadSelectTheme selectTheme;
@@ -127,7 +127,7 @@ abstract class ShadBaseTheme {
   final ShadAccordionTheme accordionTheme;
   final ShadTableTheme tableTheme;
   final ShadResizableTheme resizableTheme;
-  final ShadHoverStrategies hoverStrategies;
+  final TurboHoverStrategies hoverStrategies;
   final bool disableSecondaryBorder;
   final ShadTabsTheme tabsTheme;
   final ShadContextMenuTheme contextMenuTheme;
@@ -139,13 +139,13 @@ abstract class ShadBaseTheme {
 
 @immutable
 abstract class ShadThemeVariant {
-  ShadButtonTheme primaryButtonTheme();
-  ShadButtonTheme secondaryButtonTheme();
-  ShadButtonTheme destructiveButtonTheme();
-  ShadButtonTheme outlineButtonTheme();
-  ShadButtonTheme ghostButtonTheme();
-  ShadButtonTheme linkButtonTheme();
-  ShadButtonSizesTheme buttonSizesTheme();
+  TurboButtonTheme primaryButtonTheme();
+  TurboButtonTheme secondaryButtonTheme();
+  TurboButtonTheme destructiveButtonTheme();
+  TurboButtonTheme outlineButtonTheme();
+  TurboButtonTheme ghostButtonTheme();
+  TurboButtonTheme linkButtonTheme();
+  TurboButtonSizesTheme buttonSizesTheme();
   ShadBadgeTheme primaryBadgeTheme();
   ShadBadgeTheme secondaryBadgeTheme();
   ShadBadgeTheme destructiveBadgeTheme();
@@ -153,7 +153,7 @@ abstract class ShadThemeVariant {
   ShadAvatarTheme avatarTheme();
   ShadTooltipTheme tooltipTheme();
   ShadPopoverTheme popoverTheme();
-  ShadDecoration decorationTheme();
+  TurboDecoration decorationTheme();
   ShadTextTheme textTheme();
   ShadSelectTheme selectTheme();
   ShadOptionTheme optionTheme();
@@ -174,7 +174,7 @@ abstract class ShadThemeVariant {
   ShadAccordionTheme accordionTheme();
   ShadTableTheme tableTheme();
   ShadResizableTheme resizableTheme();
-  ShadHoverStrategies hoverStrategies();
+  TurboHoverStrategies hoverStrategies();
   ShadTabsTheme tabsTheme();
   ShadContextMenuTheme contextMenuTheme();
   ShadCalendarTheme calendarTheme();

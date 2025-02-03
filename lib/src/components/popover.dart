@@ -127,7 +127,7 @@ class ShadPopover extends StatefulWidget {
   /// {@template ShadPopover.decoration}
   /// The decoration of the [popover].
   /// {@endtemplate}
-  final ShadDecoration? decoration;
+  final TurboDecoration? decoration;
 
   /// {@template ShadPopover.filter}
   /// The filter of the [popover], defaults to `null`.
@@ -192,7 +192,7 @@ class _ShadPopoverState extends State<ShadPopover> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ShadTheme.of(context);
+    final theme = TurboTheme.of(context);
 
     final effectiveEffects = widget.effects ?? theme.popoverTheme.effects ?? [];
     final effectivePadding = widget.padding ??
@@ -200,7 +200,7 @@ class _ShadPopoverState extends State<ShadPopover> {
         const EdgeInsets.symmetric(horizontal: 12, vertical: 6);
     final effectiveShadows = widget.shadows ?? theme.popoverTheme.shadows;
     var effectiveDecoration =
-        (theme.popoverTheme.decoration ?? const ShadDecoration())
+        (theme.popoverTheme.decoration ?? const TurboDecoration())
             .mergeWith(widget.decoration)
             .copyWith(shadows: effectiveShadows);
     // remove the top padding of the popover
@@ -218,7 +218,7 @@ class _ShadPopoverState extends State<ShadPopover> {
 
     Widget popover = ShadMouseArea(
       groupId: widget.areaGroupId,
-      child: ShadDecorator(
+      child: TurboDecorator(
         decoration: effectiveDecoration,
         child: Padding(
           padding: effectivePadding,
